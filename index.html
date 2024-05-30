@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
   <!-- Common Tags -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Mafujul Islam | Software Engineer</title>
   <!-- Search Engine -->
-  <meta name="description" content="Hi, I'm a passionate and amazing Software Engineer from Bangladesh && Senior Software Engineer @IRDFoundation.">
+  <meta name="description" content="Hi, I'm a passionate and amazing Software Engineer from Bangladesh && Senior Software Engineer @ e.solutions GmbH.">
   <meta name="image" content="https://mafujuls.github.io/img/me.jpg">
   <!-- Schema.org for Google -->
   <meta itemprop="name" content="Mafujul Islam (@mafujuls) | Software Engineer">
-  <meta itemprop="description" content="Hi, I'm a passionate and amazing Software Engineer from Bangladesh && Senior Software Engineer @IRDFoundation.">
+  <meta itemprop="description" content="Hi, I'm a passionate and amazing Software Engineer from Bangladesh && Senior Software Engineer @ e.solutions GmbH.">
   <meta itemprop="image" content="https://mafujuls.github.io/img/me.jpg">
   <!-- Twitter -->
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Mafujul Islam (@mafujuls) | Software Engineer">
-  <meta name="twitter:description" content="Hi, I'm a passionate and amazing Software Engineer from Bangladesh && Senior Software Engineer @IRDFoundation.">
+  <meta name="twitter:description" content="Hi, I'm a passionate and amazing Software Engineer from Bangladesh && Senior Software Engineer @ e.solutions GmbH.">
   <meta name="twitter:site" content="@mafujuls">
   <meta name="twitter:creator" content="@mafujuls">
   <meta name="twitter:image:src" content="https://mafujuls.github.io/img/me.jpg">
@@ -30,196 +32,360 @@
   <meta name="fb:admins" content="100008645012654">
   <meta name="og:type" content="website">
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-117374290-5"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=decive-width, initial-scale=1.0">
+    <title>Mafujul Islam | Software Engineer</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 
-    gtag('config', 'UA-117374290-5');
-  </script>
-  <!-- Stylesheets -->
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="style.css">
+
+    <!--box icons-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5LWBP5FK');</script>
+<!-- End Google Tag Manager -->
+
 </head>
-<body id="wrapper">
-  <div class="wrapper__start-tag">&lt;mafu&gt;</div>
-  <div class="app">
 
-    <!-- <div class="app_t">
-    <div class="overlay">
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5LWBP5FK"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
-      <canvas width="400" height="400" id="game"></canvas>
-      <script>
-      var canvas = document.getElementById('game');
-      var context = canvas.getContext('2d');
-      var grid = 8;
-      var count = 0;
+    <!--header design-->
+    <header class="header">
+        <a href="#" class="logo">Mafu.</a>
 
-      var snake = {
-        x: 160,
-        y: 160,
+        <div class="bx bx-menu" id="menu-icon"></div>
 
-        // snake velocity. moves one grid length every frame in either the x or y direction
-        dx: grid,
-        dy: 0,
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#education">Journey</a>
+            <!-- <a href="#skills">Skills</a> -->
+            <!-- <a href="#Portfolio">Portfolio</a> -->
 
-        // keep track of all grids the snake body occupies
-        cells: [],
+            <span class="active-nav"></span>
+        </nav>
+    </header>
+    
+    <!--home section design-->
+    <section class="home" id="home">
+        <div class="home-content">
+            <h1>Hi, I'm <span>Mafujul Islam</span> </h1>
+            <div class="text-animate">
+                <h3>Software Engineer</h3>
+            </div>
+            <p>Human | Mobile Application Developer | Kotlin and Java Developer</p>
 
-        // length of the snake. grows when eating an apple
-        maxCells: 4
-      };
-      var apple = {
-        x: 320,
-        y: 320
-      };
-      // get random whole numbers in a specific range
-      // @see https://stackoverflow.com/a/1527820/2124254
-      function getRandomInt(min, max) {
-        return Math.floor(Math.random() * (max - min)) + min;
-      }
-      // game loop
-      function loop() {
-        requestAnimationFrame(loop);
-        // slow game loop to 15 fps instead of 60 (60/15 = 4)
-        if (++count < 4) {
-          return;
-        }
-        count = 0;
-        context.clearRect(0,0,canvas.width,canvas.height);
-        // move snake by it's velocity
-        snake.x += snake.dx;
-        snake.y += snake.dy;
-        // wrap snake position horizontally on edge of screen
-        if (snake.x < 0) {
-          snake.x = canvas.width - grid;
-        }
-        else if (snake.x >= canvas.width) {
-          snake.x = 0;
-        }
+            <div class="btn-box">
+                <a href="https://coseries.com/author/mafs/" target="_blank" class="btn">Blog</a>
+                <a href="mailto:mafujulswe@gmail.com" class="btn">Let's Talk</a>
+            </div>
+        </div>
 
-        // wrap snake position vertically on edge of screen
-        if (snake.y < 0) {
-          snake.y = canvas.height - grid;
-        }
-        else if (snake.y >= canvas.height) {
-          snake.y = 0;
-        }
-        // keep track of where snake has been. front of the array is always the head
-        snake.cells.unshift({x: snake.x, y: snake.y});
-        // remove cells as we move away from them
-        if (snake.cells.length > snake.maxCells) {
-          snake.cells.pop();
-        }
-        // draw apple
-        context.fillStyle = 'red';
-        context.fillRect(apple.x, apple.y, grid-1, grid-1);
-        // draw snake one cell at a time
-        context.fillStyle = '#94a4ba';
-        snake.cells.forEach(function(cell, index) {
+        <div class="home-sci">
+            <!--<a href="mailto:mafujulswe@gmail.com"><i class='bx bxl-gmail'></i></a>-->
+            <a href="https://github.com/mafujuls" target="_blank"><i class='bx bxl-github'></i></a>
+            <a href="https://www.linkedin.com/in/mafujuls/" target="_blank"><i class='bx bxl-linkedin'></i></a>
+            <a href="https://www.facebook.com/mafujuls/" target="_blank"><i class='bx bxl-facebook'></i></a>
+            <a href="https://www.twitter.com/mafujuls/" target="_blank"><i class='bx bxl-twitter'></i></a>
+            <a href="https://stackoverflow.com/users/7624402/mafujul" target="_blank"><i class='bx bxl-stack-overflow'></i></a>
+            <a href="https://www.instagram.com/mafujuls" target="_blank"><i class='bx bxl-instagram'></i></a>
+            <a href="https://www.youtube.com/@mafujuls" target="_blank"><i class='bx bxl-youtube'></i></a>
 
-          // drawing 1 px smaller than the grid creates a grid effect in the snake body so you can see how long it is
-          context.fillRect(cell.x, cell.y, grid-1, grid-1);
-          // snake ate apple
-          if (cell.x === apple.x && cell.y === apple.y) {
-            snake.maxCells++;
-            // canvas is 400x400 which is 25x25 grids
-            apple.x = getRandomInt(0, 25) * grid;
-            apple.y = getRandomInt(0, 25) * grid;
-          }
-          // check collision with all cells after this one (modified bubble sort)
-          for (var i = index + 1; i < snake.cells.length; i++) {
+        </div>
 
-            // snake occupies same space as a body part. reset game
-            if (cell.x === snake.cells[i].x && cell.y === snake.cells[i].y) {
-              snake.x = 160;
-              snake.y = 160;
-              snake.cells = [];
-              snake.maxCells = 4;
-              snake.dx = grid;
-              snake.dy = 0;
-              apple.x = getRandomInt(0, 25) * grid;
-              apple.y = getRandomInt(0, 25) * grid;
-            }
-          }
-        });
-      }
-      // listen to keyboard events to move the snake
-      document.addEventListener('keydown', function(e) {
-        // prevent snake from backtracking on itself by checking that it's
-        // not already moving on the same axis (pressing left while moving
-        // left won't do anything, and pressing right while moving left
-        // shouldn't let you collide with your own body)
+        <div class="home-imgHover"></div>
+    </section>
 
-        // left arrow key
-        if (e.which === 37 && snake.dx === 0) {
-          snake.dx = -grid;
-          snake.dy = 0;
-        }
-        // up arrow key
-        else if (e.which === 38 && snake.dy === 0) {
-          snake.dy = -grid;
-          snake.dx = 0;
-        }
-        // right arrow key
-        else if (e.which === 39 && snake.dx === 0) {
-          snake.dx = grid;
-          snake.dy = 0;
-        }
-        // down arrow key
-        else if (e.which === 40 && snake.dy === 0) {
-          snake.dy = grid;
-          snake.dx = 0;
-        }
-      });
-      // start the game
-      requestAnimationFrame(loop);
-      </script>
+    <!--about section desgin-->
+    <section class="about" id="about">
+        <h2 class="heading">About <span>Me</span></h2>
+
+        <div class="about-img">
+            <img src="images/profile.jpg" alt="">
+            <span class="circle-spin"></span>
+        </div>
+
+        <div class="about-content">
+            <h3>Software Engineer!</h3>
+            <p>
+		Hi there! I'm Mafujul, a passionate software engineer with a strong background in Mobile App Development. Originally from Bangladesh, but currently based in Germany, I've been honing my skills in the tech industry for more than 8 years, with a focus on crafting user-friendly and innovative Mobile and In Vehicle Infotainment app solutions.
+<br>
+
+I hold a BSc in Engineering and recently completed my MSc in Engineering, both of which have equipped me with a solid foundation for tackling complex technical challenges.
 
 
-    </div>
+        </p>
+            
+            <div class="btn-box btns">
+                <a href="https://www.linkedin.com/in/mafujuls/" target="_blank" class="btn">Know More</a>
+            </div>
+        </div>
+    </section>
 
-  </div> -->
+    <!--Education section design-->
+    <section class="education" id="education">
+        <h2 class="heading">My <span>Journey</span></h2>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover"/><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700" media="all"/><style data-href="/styles.15ebc39f9d39da4c9255.css">.svg-inline--fa,svg:not(:root).svg-inline--fa{overflow:visible}.svg-inline--fa{display:inline-block;font-size:inherit;height:1em;vertical-align:-.125em}.svg-inline--fa.fa-lg{vertical-align:-.225em}.svg-inline--fa.fa-w-1{width:.0625em}.svg-inline--fa.fa-w-2{width:.125em}.svg-inline--fa.fa-w-3{width:.1875em}.svg-inline--fa.fa-w-4{width:.25em}.svg-inline--fa.fa-w-5{width:.3125em}.svg-inline--fa.fa-w-6{width:.375em}.svg-inline--fa.fa-w-7{width:.4375em}.svg-inline--fa.fa-w-8{width:.5em}.svg-inline--fa.fa-w-9{width:.5625em}.svg-inline--fa.fa-w-10{width:.625em}.svg-inline--fa.fa-w-11{width:.6875em}.svg-inline--fa.fa-w-12{width:.75em}.svg-inline--fa.fa-w-13{width:.8125em}.svg-inline--fa.fa-w-14{width:.875em}.svg-inline--fa.fa-w-15{width:.9375em}.svg-inline--fa.fa-w-16{width:1em}.svg-inline--fa.fa-w-17{width:1.0625em}.svg-inline--fa.fa-w-18{width:1.125em}.svg-inline--fa.fa-w-19{width:1.1875em}.svg-inline--fa.fa-w-20{width:1.25em}.svg-inline--fa.fa-pull-left{margin-right:.3em;width:auto}.svg-inline--fa.fa-pull-right{margin-left:.3em;width:auto}.svg-inline--fa.fa-border{height:1.5em}.svg-inline--fa.fa-li{width:2em}.svg-inline--fa.fa-fw{width:1.25em}.fa-layers svg.svg-inline--fa{bottom:0;left:0;margin:auto;position:absolute;right:0;top:0}.fa-layers{display:inline-block;height:1em;position:relative;text-align:center;vertical-align:-.125em;width:1em}.fa-layers svg.svg-inline--fa{-webkit-transform-origin:center center;transform-origin:center center}.fa-layers-counter,.fa-layers-text{display:inline-block;position:absolute;text-align:center}.fa-layers-text{left:50%;top:50%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);-webkit-transform-origin:center center;transform-origin:center center}.fa-layers-counter{background-color:#ff253a;border-radius:1em;box-sizing:border-box;color:#fff;height:1.5em;line-height:1;max-width:5em;min-width:1.5em;overflow:hidden;padding:.25em;right:0;text-overflow:ellipsis;top:0;-webkit-transform:scale(.25);transform:scale(.25);-webkit-transform-origin:top right;transform-origin:top right}.fa-layers-bottom-right{bottom:0;right:0;top:auto;-webkit-transform:scale(.25);transform:scale(.25);-webkit-transform-origin:bottom right;transform-origin:bottom right}.fa-layers-bottom-left{bottom:0;left:0;right:auto;top:auto;-webkit-transform:scale(.25);transform:scale(.25);-webkit-transform-origin:bottom left;transform-origin:bottom left}.fa-layers-top-right{right:0;top:0;-webkit-transform:scale(.25);transform:scale(.25);-webkit-transform-origin:top right;transform-origin:top right}.fa-layers-top-left{left:0;right:auto;top:0;-webkit-transform:scale(.25);transform:scale(.25);-webkit-transform-origin:top left;transform-origin:top left}.fa-lg{font-size:1.33333em;line-height:.75em;vertical-align:-.0667em}.fa-xs{font-size:.75em}.fa-sm{font-size:.875em}.fa-1x{font-size:1em}.fa-2x{font-size:2em}.fa-3x{font-size:3em}.fa-4x{font-size:4em}.fa-5x{font-size:5em}.fa-6x{font-size:6em}.fa-7x{font-size:7em}.fa-8x{font-size:8em}.fa-9x{font-size:9em}.fa-10x{font-size:10em}.fa-fw{text-align:center;width:1.25em}.fa-ul{list-style-type:none;margin-left:2.5em;padding-left:0}.fa-ul>li{position:relative}.fa-li{left:-2em;position:absolute;text-align:center;width:2em;line-height:inherit}.fa-border{border:.08em solid #eee;border-radius:.1em;padding:.2em .25em .15em}.fa-pull-left{float:left}.fa-pull-right{float:right}.fa.fa-pull-left,.fab.fa-pull-left,.fal.fa-pull-left,.far.fa-pull-left,.fas.fa-pull-left{margin-right:.3em}.fa.fa-pull-right,.fab.fa-pull-right,.fal.fa-pull-right,.far.fa-pull-right,.fas.fa-pull-right{margin-left:.3em}.fa-spin{-webkit-animation:fa-spin 2s linear infinite;animation:fa-spin 2s linear infinite}.fa-pulse{-webkit-animation:fa-spin 1s steps(8) infinite;animation:fa-spin 1s steps(8) infinite}@-webkit-keyframes fa-spin{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}to{-webkit-transform:rotate(1turn);transform:rotate(1turn)}}@keyframes fa-spin{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}to{-webkit-transform:rotate(1turn);transform:rotate(1turn)}}.fa-rotate-90{-ms-filter:"progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";-webkit-transform:rotate(90deg);transform:rotate(90deg)}.fa-rotate-180{-ms-filter:"progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";-webkit-transform:rotate(180deg);transform:rotate(180deg)}.fa-rotate-270{-ms-filter:"progid:DXImageTransform.Microsoft.BasicImage(rotation=3)";-webkit-transform:rotate(270deg);transform:rotate(270deg)}.fa-flip-horizontal{-ms-filter:"progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)";-webkit-transform:scaleX(-1);transform:scaleX(-1)}.fa-flip-vertical{-webkit-transform:scaleY(-1);transform:scaleY(-1)}.fa-flip-both,.fa-flip-horizontal.fa-flip-vertical,.fa-flip-vertical{-ms-filter:"progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)"}.fa-flip-both,.fa-flip-horizontal.fa-flip-vertical{-webkit-transform:scale(-1);transform:scale(-1)}:root .fa-flip-both,:root .fa-flip-horizontal,:root .fa-flip-vertical,:root .fa-rotate-90,:root .fa-rotate-180,:root .fa-rotate-270{-webkit-filter:none;filter:none}.fa-stack{display:inline-block;height:2em;position:relative;width:2.5em}.fa-stack-1x,.fa-stack-2x{bottom:0;left:0;margin:auto;position:absolute;right:0;top:0}.svg-inline--fa.fa-stack-1x{height:1em;width:1.25em}.svg-inline--fa.fa-stack-2x{height:2em;width:2.5em}.fa-inverse{color:#fff}.sr-only{border:0;clip:rect(0,0,0,0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.sr-only-focusable:active,.sr-only-focusable:focus{clip:auto;height:auto;margin:0;overflow:visible;position:static;width:auto}html{font-family:Montserrat,sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0;background-color:#fff;transition:background-color .5s}body.snap{-webkit-scroll-snap-type:y mandatory;-ms-scroll-snap-type:y mandatory;scroll-snap-type:y mandatory}a{color:#94a4ba;text-decoration:none;transition:.2s ease-out}a:focus,a:hover{color:#000;-webkit-transform:translate3d(0,-.1rem,0);transform:translate3d(0,-.1rem,0)}footer{display:block;scroll-snap-align:end;margin-top:100px;padding:50px 20px;background-color:#fff;text-align:center;font-size:.9rem}.SocialLink-module--link--3YIFO{display:-webkit-flex;display:flex;-webkit-flex-direction:column;flex-direction:column;-webkit-align-items:center;align-items:center;width:2rem;margin-left:.75rem;margin-right:.75rem;color:#94a4ba}.SocialLink-module--title--24QGU{display:none}.ProjectIcon-module--container--RRIwn{width:16vh;height:16vh}.ProjectIcon-module--rounded--3-ml6{border-radius:8%;box-shadow:0 10px 20px rgba(0,0,0,.42)}.ProjectIcon-module--prerendered--gUKkf{-webkit-filter:drop-shadow(0 10px 20px rgba(0,0,0,.42));filter:drop-shadow(0 10px 20px rgba(0,0,0,.42))}.marvel-device{font-size:100px;display:inline-block;position:relative;box-sizing:content-box!important}.marvel-device .screen{width:100%;position:relative;height:100%;z-index:3;background:#fff;overflow:hidden;display:block;border-radius:.01em;box-shadow:0 0 0 .03em #111}.marvel-device .screen>*{font-size:medium}.marvel-device .bottom-bar,.marvel-device .top-bar{height:.03em;background:#000;width:100%;display:block}.marvel-device .middle-bar{width:.03em;height:.04em;top:0;left:.9em;background:#000;position:absolute}.marvel-device.iphone8{width:3.75em;height:6.67em;padding:1.05em .24em;background:#d9dbdc;border-radius:.56em;box-shadow:inset 0 0 .03em 0 rgba(0,0,0,.2)}.marvel-device.iphone8:before{width:calc(100% - .12em);height:calc(100% - .12em);position:absolute;top:.06em;content:"";left:.06em;border-radius:.5em;background:#f8f8f8;z-index:1}.marvel-device.iphone8:after{width:calc(100% - .16em);height:calc(100% - .16em);position:absolute;top:.08em;content:"";left:.08em;border-radius:.48em;box-shadow:inset 0 0 .03em 0 rgba(0,0,0,.1),inset 0 0 .06em .03em #fff;z-index:2}.marvel-device.iphone8 .home{border-radius:100%;width:.68em;height:.68em;position:absolute;left:50%;margin-left:-.34em;bottom:.22em;z-index:3;background:#303233;background:linear-gradient(135deg,#303233,#b5b7b9 50%,#f0f2f2 69%,#303233)}.marvel-device.iphone8 .home:before{background:#f8f8f8;position:absolute;content:"";border-radius:100%;width:calc(100% - .08em);height:calc(100% - .08em);top:.04em;left:.04em}.marvel-device.iphone8 .top-bar{height:.14em;background:#bfbfc0;position:absolute;top:.68em;left:0}.marvel-device.iphone8 .bottom-bar{height:.14em;background:#bfbfc0;position:absolute;bottom:.68em;left:0}.marvel-device.iphone8 .sleep{top:1.9em;right:-.04em;border-radius:0 .02em .02em 0}.marvel-device.iphone8 .sleep,.marvel-device.iphone8 .volume{position:absolute;width:.04em;height:.66em;background:#d9dbdc}.marvel-device.iphone8 .volume{left:-.04em;top:1.88em;z-index:0;border-radius:.02em 0 0 .02em}.marvel-device.iphone8 .volume:before{left:.02em;top:-.78em;height:.4em;width:.02em}.marvel-device.iphone8 .volume:after,.marvel-device.iphone8 .volume:before{position:absolute;border-radius:.02em 0 0 .02em;background:inherit;content:"";display:block}.marvel-device.iphone8 .volume:after{left:0;top:.82em;height:.66em;width:.04em}.marvel-device.iphone8 .camera{width:.12em;height:.12em;top:.24em;left:50%;margin-left:-.06em}.marvel-device.iphone8 .camera,.marvel-device.iphone8 .sensor{background:#3c3d3d;position:absolute;border-radius:100%;z-index:3}.marvel-device.iphone8 .sensor{width:.16em;height:.16em;top:.49em;left:1.34em}.marvel-device.iphone8 .speaker{background:#292728;width:.7em;height:.06em;position:absolute;top:.54em;left:50%;margin-left:-.35em;border-radius:.06em;z-index:3}.marvel-device.iphone8.gold{background:#f9e7d3}.marvel-device.iphone8.gold .bottom-bar,.marvel-device.iphone8.gold .top-bar{background:#fff}.marvel-device.iphone8.gold .sleep,.marvel-device.iphone8.gold .volume{background:#f9e7d3}.marvel-device.iphone8.gold .home{background:#cebba9;background:linear-gradient(135deg,#cebba9,#f9e7d3 50%,#cebba9)}.marvel-device.iphone8.black{background:#464646;box-shadow:inset 0 0 .03em 0 rgba(0,0,0,.7)}.marvel-device.iphone8.black:before{background:#080808}.marvel-device.iphone8.black:after{box-shadow:inset 0 0 .03em 0 rgba(0,0,0,.1),inset 0 0 .06em .03em #212121}.marvel-device.iphone8.black .bottom-bar,.marvel-device.iphone8.black .top-bar{background:#212121}.marvel-device.iphone8.black .sleep,.marvel-device.iphone8.black .volume{background:#464646}.marvel-device.iphone8.black .camera{background:#080808}.marvel-device.iphone8.black .home{background:#080808;background:linear-gradient(135deg,#080808,#464646 50%,#080808)}.marvel-device.iphone8.black .home:before{background:#080808}.marvel-device.iphone8.landscape{padding:.24em 1.05em;height:3.75em;width:6.67em}.marvel-device.iphone8.landscape .sleep{top:100%;border-radius:0 0 .02em .02em;right:1.9em;height:.04em;width:.66em}.marvel-device.iphone8.landscape .volume{width:.66em;height:.04em;top:-.04em;left:calc(100% - 2.54em);border-radius:.02em .02em 0 0}.marvel-device.iphone8.landscape .volume:before{width:.4em;height:.02em;top:.02em;right:-.78em;left:auto;border-radius:.02em .02em 0 0}.marvel-device.iphone8.landscape .volume:after{left:-.82em;width:.66em;height:.04em;top:0;border-radius:.02em .02em 0 0}.marvel-device.iphone8.landscape .top-bar{width:.14em;height:100%;left:calc(100% - .82em);top:0}.marvel-device.iphone8.landscape .bottom-bar{width:.14em;height:100%;left:.68em;top:0}.marvel-device.iphone8.landscape .home{top:50%;margin-top:-.34em;margin-left:0;left:.22em}.marvel-device.iphone8.landscape .sensor{top:1.34em;left:calc(100% - .65em)}.marvel-device.iphone8.landscape .speaker{height:.7em;width:.06em;left:calc(100% - .6em);top:50%;margin-left:0;margin-top:-.35em}.marvel-device.iphone8.landscape .camera{left:calc(100% - .32em);top:50%;margin-left:0;margin-top:-.05em}.marvel-device.iphone8plus{width:4.14em;height:7.36em;padding:1.12em .26em;background:#d9dbdc;border-radius:.56em;box-shadow:inset 0 0 .03em 0 rgba(0,0,0,.2)}.marvel-device.iphone8plus:before{width:calc(100% - .12em);height:calc(100% - .12em);position:absolute;top:.06em;content:"";left:.06em;border-radius:.5em;background:#f8f8f8;z-index:1}.marvel-device.iphone8plus:after{width:calc(100% - .16em);height:calc(100% - .16em);position:absolute;top:.08em;content:"";left:.08em;border-radius:.48em;box-shadow:inset 0 0 .03em 0 rgba(0,0,0,.1),inset 0 0 .06em .03em #fff;z-index:2}.marvel-device.iphone8plus .home{border-radius:100%;width:.68em;height:.68em;position:absolute;left:50%;margin-left:-.34em;bottom:.24em;z-index:3;background:#303233;background:linear-gradient(135deg,#303233,#b5b7b9 50%,#f0f2f2 69%,#303233)}.marvel-device.iphone8plus .home:before{background:#f8f8f8;position:absolute;content:"";border-radius:100%;width:calc(100% - .08em);height:calc(100% - .08em);top:.04em;left:.04em}.marvel-device.iphone8plus .top-bar{height:.14em;background:#bfbfc0;position:absolute;top:.68em;left:0}.marvel-device.iphone8plus .bottom-bar{height:.14em;background:#bfbfc0;position:absolute;bottom:.68em;left:0}.marvel-device.iphone8plus .sleep{position:absolute;top:1.9em;right:-.04em;width:.04em;height:.66em;border-radius:0 .02em .02em 0;background:#d9dbdc}.marvel-device.iphone8plus .volume{position:absolute;left:-.04em;top:1.88em;z-index:0;height:.66em;width:.04em;border-radius:.02em 0 0 .02em;background:#d9dbdc}.marvel-device.iphone8plus .volume:before{left:.02em;top:-.78em;height:.4em;width:.02em}.marvel-device.iphone8plus .volume:after,.marvel-device.iphone8plus .volume:before{position:absolute;border-radius:.02em 0 0 .02em;background:inherit;content:"";display:block}.marvel-device.iphone8plus .volume:after{left:0;top:.82em;height:.66em;width:.04em}.marvel-device.iphone8plus .camera{background:#3c3d3d;width:.12em;height:.12em;position:absolute;top:.29em;left:50%;margin-left:-.06em;border-radius:100%;z-index:3}.marvel-device.iphone8plus .sensor{background:#3c3d3d;width:.16em;height:.16em;position:absolute;top:.54em;left:1.54em;z-index:3;border-radius:100%}.marvel-device.iphone8plus .speaker{background:#292728;width:.7em;height:.06em;position:absolute;top:.59em;left:50%;margin-left:-.35em;border-radius:.06em;z-index:3}.marvel-device.iphone8plus.gold{background:#f9e7d3}.marvel-device.iphone8plus.gold .bottom-bar,.marvel-device.iphone8plus.gold .top-bar{background:#fff}.marvel-device.iphone8plus.gold .sleep,.marvel-device.iphone8plus.gold .volume{background:#f9e7d3}.marvel-device.iphone8plus.gold .home{background:#cebba9;background:linear-gradient(135deg,#cebba9,#f9e7d3 50%,#cebba9)}.marvel-device.iphone8plus.black{background:#464646;box-shadow:inset 0 0 .03em 0 rgba(0,0,0,.7)}.marvel-device.iphone8plus.black:before{background:#080808}.marvel-device.iphone8plus.black:after{box-shadow:inset 0 0 .03em 0 rgba(0,0,0,.1),inset 0 0 .06em .03em #212121}.marvel-device.iphone8plus.black .bottom-bar,.marvel-device.iphone8plus.black .top-bar{background:#212121}.marvel-device.iphone8plus.black .sleep,.marvel-device.iphone8plus.black .volume{background:#464646}.marvel-device.iphone8plus.black .camera{background:#080808}.marvel-device.iphone8plus.black .home{background:#080808;background:linear-gradient(135deg,#080808,#464646 50%,#080808)}.marvel-device.iphone8plus.black .home:before{background:#080808}.marvel-device.iphone8plus.landscape{padding:.26em 1.12em;height:4.14em;width:7.36em}.marvel-device.iphone8plus.landscape .sleep{top:100%;border-radius:0 0 .02em .02em;right:1.9em;height:.04em;width:.66em}.marvel-device.iphone8plus.landscape .volume{width:.66em;height:.04em;top:-.04em;left:calc(100% - 2.54em);border-radius:.02em .02em 0 0}.marvel-device.iphone8plus.landscape .volume:before{width:.4em;height:.02em;top:.02em;right:-.78em;left:auto;border-radius:.02em .02em 0 0}.marvel-device.iphone8plus.landscape .volume:after{left:-.82em;width:.66em;height:.04em;top:0;border-radius:.02em .02em 0 0}.marvel-device.iphone8plus.landscape .top-bar{width:.14em;height:100%;left:calc(100% - .82em);top:0}.marvel-device.iphone8plus.landscape .bottom-bar{width:.14em;height:100%;left:.68em;top:0}.marvel-device.iphone8plus.landscape .home{top:50%;margin-top:-.34em;margin-left:0;left:.24em}.marvel-device.iphone8plus.landscape .sensor{top:1.54em;left:calc(100% - .7em)}.marvel-device.iphone8plus.landscape .speaker{height:.7em;width:.06em;left:calc(100% - .65em);top:50%;margin-left:0;margin-top:-.35em}.marvel-device.iphone8plus.landscape .camera{left:calc(100% - .29em);top:50%;margin-left:0;margin-top:-.05em}.marvel-device.iphone5c,.marvel-device.iphone5s{padding:1.05em .22em;background:#2c2b2c;width:3.2em;height:5.68em;border-radius:.5em}.marvel-device.iphone5c:before,.marvel-device.iphone5s:before{width:calc(100% - .08em);height:calc(100% - .08em);position:absolute;top:.04em;content:"";left:.04em;border-radius:.46em;background:#1e1e1e;z-index:1}.marvel-device.iphone5c .sleep,.marvel-device.iphone5s .sleep{position:absolute;top:-.04em;right:.6em;width:.6em;height:.04em;border-radius:.02em .02em 0 0;background:#282727}.marvel-device.iphone5c .volume,.marvel-device.iphone5s .volume{position:absolute;left:-.04em;top:1.8em;z-index:0;height:.27em;width:.04em;border-radius:.02em 0 0 .02em;background:#282727}.marvel-device.iphone5c .volume:before,.marvel-device.iphone5s .volume:before{position:absolute;left:0;top:-.75em;height:.35em;width:.04em;border-radius:.02em 0 0 .02em;background:inherit;content:"";display:block}.marvel-device.iphone5c .volume:after,.marvel-device.iphone5s .volume:after{position:absolute;left:0;bottom:-.64em;height:.27em;width:.04em;border-radius:.02em 0 0 .02em;background:inherit;content:"";display:block}.marvel-device.iphone5c .camera,.marvel-device.iphone5s .camera{background:#3c3d3d;width:.1em;height:.1em;position:absolute;top:.32em;left:50%;margin-left:-.05em;border-radius:.05em;z-index:3}.marvel-device.iphone5c .sensor,.marvel-device.iphone5s .sensor{background:#3c3d3d;width:.1em;height:.1em;position:absolute;top:.6em;left:1.6em;z-index:3;margin-left:-.32em;border-radius:.05em}.marvel-device.iphone5c .speaker,.marvel-device.iphone5s .speaker{background:#292728;width:.64em;height:.1em;position:absolute;top:.6em;left:50%;margin-left:-.32em;border-radius:.05em;z-index:3}.marvel-device.iphone5c.landscape,.marvel-device.iphone5s.landscape{padding:.22em 1.05em;height:3.2em;width:5.68em}.marvel-device.iphone5c.landscape .sleep,.marvel-device.iphone5s.landscape .sleep{right:-.04em;top:calc(100% - 1.2em);height:.6em;width:.04em;border-radius:0 .02em .02em 0}.marvel-device.iphone5c.landscape .volume,.marvel-device.iphone5s.landscape .volume{width:.27em;height:.04em;top:-.04em;left:calc(100% - 1.8em);border-radius:.02em .02em 0 0}.marvel-device.iphone5c.landscape .volume:before,.marvel-device.iphone5s.landscape .volume:before{width:.35em;height:.04em;top:0;right:-.75em;left:auto;border-radius:.02em .02em 0 0}.marvel-device.iphone5c.landscape .volume:after,.marvel-device.iphone5s.landscape .volume:after{bottom:0;left:-.64em;z-index:999;height:.04em;width:.27em;border-radius:.02em .02em 0 0}.marvel-device.iphone5c.landscape .sensor,.marvel-device.iphone5s.landscape .sensor{top:1.6em;left:calc(100% - .6em);margin-left:0;margin-top:-.32em}.marvel-device.iphone5c.landscape .speaker,.marvel-device.iphone5s.landscape .speaker{height:.64em;width:.1em;left:calc(100% - .6em);top:50%;margin-left:0;margin-top:-.32em}.marvel-device.iphone5c.landscape .camera,.marvel-device.iphone5s.landscape .camera{left:calc(100% - .32em);top:50%;margin-left:0;margin-top:-.05em}.marvel-device.iphone5s .home{border-radius:.36em;width:.68em;box-shadow:inset 0 0 0 .04em #2c2b2c;height:.68em;position:absolute;left:50%;margin-left:-.34em;bottom:.19em;z-index:3}.marvel-device.iphone5s .top-bar{top:.7em;position:absolute;left:0}.marvel-device.iphone5s .bottom-bar{bottom:.7em;position:absolute;left:0}.marvel-device.iphone5s.landscape .home{left:.19em;bottom:50%;margin-bottom:-.34em;margin-left:0}.marvel-device.iphone5s.landscape .top-bar{left:.7em;top:0;width:.03em;height:100%}.marvel-device.iphone5s.landscape .bottom-bar{right:.7em;left:auto;bottom:0;width:.03em;height:100%}.marvel-device.iphone5s.silver{background:#bcbcbc}.marvel-device.iphone5s.silver:before{background:#fcfcfc}.marvel-device.iphone5s.silver .sleep,.marvel-device.iphone5s.silver .volume{background:#d6d6d6}.marvel-device.iphone5s.silver .bottom-bar,.marvel-device.iphone5s.silver .top-bar{background:#eaebec}.marvel-device.iphone5s.silver .home{box-shadow:inset 0 0 0 .04em #bcbcbc}.marvel-device.iphone5s.gold{background:#f9e7d3}.marvel-device.iphone5s.gold:before{background:#fcfcfc}.marvel-device.iphone5s.gold .sleep,.marvel-device.iphone5s.gold .volume{background:#f9e7d3}.marvel-device.iphone5s.gold .bottom-bar,.marvel-device.iphone5s.gold .top-bar{background:#fff}.marvel-device.iphone5s.gold .home{box-shadow:inset 0 0 0 .04em #f9e7d3}.marvel-device.iphone5c{background:#fff;box-shadow:0 .01em .02em 0 rgba(0,0,0,.2)}.marvel-device.iphone5c .bottom-bar,.marvel-device.iphone5c .top-bar{display:none}.marvel-device.iphone5c .home{background:#242324;border-radius:.36em;width:.68em;height:.68em;z-index:3;position:absolute;left:50%;margin-left:-.34em;bottom:.19em}.marvel-device.iphone5c .home:after{width:.2em;height:.2em;border:.01em solid hsla(0,0%,100%,.1);border-radius:.04em;position:absolute;display:block;content:"";top:50%;left:50%;margin-top:-.11em;margin-left:-.11em}.marvel-device.iphone5c.landscape .home{left:.19em;bottom:50%;margin-bottom:-.34em;margin-left:0}.marvel-device.iphone5c .sleep,.marvel-device.iphone5c .volume{background:#ddd}.marvel-device.iphone5c.red{background:#f96b6c}.marvel-device.iphone5c.red .sleep,.marvel-device.iphone5c.red .volume{background:#ed5758}.marvel-device.iphone5c.yellow{background:#f2dc60}.marvel-device.iphone5c.yellow .sleep,.marvel-device.iphone5c.yellow .volume{background:#e5ce4c}.marvel-device.iphone5c.green{background:#97e563}.marvel-device.iphone5c.green .sleep,.marvel-device.iphone5c.green .volume{background:#85d94d}.marvel-device.iphone5c.blue{background:#33a2db}.marvel-device.iphone5c.blue .sleep,.marvel-device.iphone5c.blue .volume{background:#2694cd}.marvel-device.iphone4s{padding:1.29em .27em;width:3.2em;height:4.8em;background:#686868;border-radius:.54em}.marvel-device.iphone4s:before{content:"";width:calc(100% - .08em);height:calc(100% - .08em);position:absolute;top:.04em;left:.04em;z-index:1;border-radius:.5em;background:#1e1e1e}.marvel-device.iphone4s .top-bar{top:.6em;position:absolute;left:0}.marvel-device.iphone4s .bottom-bar{bottom:.9em;position:absolute;left:0}.marvel-device.iphone4s .camera{background:#3c3d3d;width:.1em;height:.1em;position:absolute;top:.72em;left:1.34em;z-index:3;margin-left:-.05em;border-radius:100%}.marvel-device.iphone4s .speaker{width:.64em;top:.72em;margin-left:-.32em}.marvel-device.iphone4s .sensor,.marvel-device.iphone4s .speaker{background:#292728;height:.1em;position:absolute;left:50%;z-index:3;border-radius:.05em}.marvel-device.iphone4s .sensor{width:.4em;top:.36em;margin-left:-.2em}.marvel-device.iphone4s .home{background:#242324;border-radius:100%;width:.72em;height:.72em;z-index:3;position:absolute;left:50%;margin-left:-.36em;bottom:.3em}.marvel-device.iphone4s .home:after{width:.2em;height:.2em;border:.01em solid hsla(0,0%,100%,.1);border-radius:.04em;position:absolute;display:block;content:"";top:50%;left:50%;margin-top:-.11em;margin-left:-.11em}.marvel-device.iphone4s .sleep{position:absolute;top:-.04em;right:.6em;width:.6em;height:.04em;border-radius:.02em .02em 0 0;background:#4d4d4d}.marvel-device.iphone4s .volume{position:absolute;left:-.04em;top:1.6em;height:.27em;width:.04em;border-radius:.02em 0 0 .02em;background:#4d4d4d}.marvel-device.iphone4s .volume:before{top:-.7em;height:.35em}.marvel-device.iphone4s .volume:after,.marvel-device.iphone4s .volume:before{position:absolute;left:0;width:.04em;border-radius:.02em 0 0 .02em;background:inherit;content:"";display:block}.marvel-device.iphone4s .volume:after{bottom:-.64em;height:.27em}.marvel-device.iphone4s.landscape{padding:.27em 1.29em;height:3.2em;width:4.8em}.marvel-device.iphone4s.landscape .bottom-bar{left:.9em;bottom:0;height:100%;width:.03em}.marvel-device.iphone4s.landscape .top-bar{left:calc(100% - .6em);top:0;height:100%;width:.03em}.marvel-device.iphone4s.landscape .camera{top:1.34em;left:calc(100% - .72em);margin-left:0}.marvel-device.iphone4s.landscape .speaker{top:50%;margin-left:0;margin-top:-.32em;left:calc(100% - .72em);width:.1em;height:.64em}.marvel-device.iphone4s.landscape .sensor{height:.4em;width:.1em;left:calc(100% - .36em);top:50%;margin-left:0;margin-top:-.2em}.marvel-device.iphone4s.landscape .home{left:.3em;bottom:50%;margin-left:0;margin-bottom:-.36em}.marvel-device.iphone4s.landscape .sleep{height:.6em;width:.04em;right:-.04em;top:calc(100% - 1.2em);border-radius:0 .02em .02em 0}.marvel-device.iphone4s.landscape .volume{top:-.04em;left:calc(100% - 1.87em);height:.04em;width:.27em;border-radius:.02em .02em 0 0}.marvel-device.iphone4s.landscape .volume:before{right:-.7em;left:auto;top:0;width:.35em;height:.04em;border-radius:.02em .02em 0 0}.marvel-device.iphone4s.landscape .volume:after{width:.27em;height:.04em;bottom:0;left:-.64em;border-radius:.02em .02em 0 0}.marvel-device.iphone4s.silver{background:#bcbcbc}.marvel-device.iphone4s.silver:before{background:#fcfcfc}.marvel-device.iphone4s.silver .home{background:#fcfcfc;box-shadow:inset 0 0 0 .01em #bcbcbc}.marvel-device.iphone4s.silver .home:after{border:.01em solid rgba(0,0,0,.2)}.marvel-device.iphone4s.silver .sleep,.marvel-device.iphone4s.silver .volume{background:#d6d6d6}.marvel-device.nexus5{padding:.5em .15em;width:3.2em;height:5.68em;background:#1e1e1e;border-radius:.2em}.marvel-device.nexus5:before{border-radius:6em/.5em;background:inherit;content:"";top:0;position:absolute;height:103.1%;width:calc(100% - .26em);top:50%;left:50%;-webkit-transform:translateX(-50%) translateY(-50%);transform:translateX(-50%) translateY(-50%)}.marvel-device.nexus5 .top-bar{width:calc(100% - .08em);height:calc(100% - .06em);position:absolute;top:.03em;left:.04em;border-radius:.2em;background:#181818}.marvel-device.nexus5 .top-bar:before{border-radius:6em/.5em;background:inherit;content:"";top:0;position:absolute;height:103%;width:calc(100% - .26em);top:50%;left:50%;-webkit-transform:translateX(-50%) translateY(-50%);transform:translateX(-50%) translateY(-50%)}.marvel-device.nexus5 .bottom-bar{display:none}.marvel-device.nexus5 .sleep{width:.03em;position:absolute;left:-.03em;top:1.1em;height:1em;background:inherit;border-radius:.02em 0 0 .02em}.marvel-device.nexus5 .volume{width:.03em;position:absolute;right:-.03em;top:.7em;height:.45em;background:inherit;border-radius:0 .02em .02em 0}.marvel-device.nexus5 .camera{background:#3c3d3d;width:.1em;height:.1em;position:absolute;top:.18em;left:50%;z-index:3;margin-left:-.05em;border-radius:100%}.marvel-device.nexus5 .camera:before{background:#3c3d3d;width:.06em;height:.06em;content:"";display:block;position:absolute;top:.02em;left:-1em;z-index:3;border-radius:100%}.marvel-device.nexus5.landscape{padding:.15em .5em;height:3.2em;width:5.68em}.marvel-device.nexus5.landscape:before{width:103.1%;height:calc(100% - .26em);border-radius:.5em/6em}.marvel-device.nexus5.landscape .top-bar{left:.03em;top:.04em;height:calc(100% - .08em);width:calc(100% - .06em)}.marvel-device.nexus5.landscape .top-bar:before{width:103%;height:calc(100% - .26em);border-radius:.5em/6em}.marvel-device.nexus5.landscape .sleep{height:.03em;width:1em;left:calc(100% - 2.1em);top:-.03em;border-radius:.02em .02em 0 0}.marvel-device.nexus5.landscape .volume{height:.03em;width:.45em;right:.7em;top:100%;border-radius:0 0 .02em .02em}.marvel-device.nexus5.landscape .camera{top:50%;left:calc(100% - .18em);margin-left:0;margin-top:-.05em}.marvel-device.nexus5.landscape .camera:before{top:-1em;left:.02em}.marvel-device.s5{padding:.6em .18em;border-radius:.42em;width:3.2em;height:5.68em;background:#bcbcbc}.marvel-device.s5:after,.marvel-device.s5:before{width:calc(100% - .52em);content:"";display:block;height:.26em;background:inherit;position:absolute;border-radius:5em/.4em;left:50%;-webkit-transform:translateX(-50%);transform:translateX(-50%)}.marvel-device.s5:before{top:-.07em}.marvel-device.s5:after{bottom:-.07em}.marvel-device.s5 .bottom-bar{display:none}.marvel-device.s5 .top-bar{border-radius:.37em;width:calc(100% - .1em);height:calc(100% - .1em);top:.05em;left:.05em;background:radial-gradient(rgba(0,0,0,.02) 20%,transparent 60%) 0 0,radial-gradient(rgba(0,0,0,.02) 20%,transparent 60%) .03em .03em;background-color:#fff;background-size:.04em .04em;background-position:50%;z-index:2;position:absolute}.marvel-device.s5 .top-bar:after,.marvel-device.s5 .top-bar:before{width:calc(100% - .48em);content:"";display:block;height:.26em;background:inherit;position:absolute;border-radius:5em/.4em;left:50%;-webkit-transform:translateX(-50%);transform:translateX(-50%)}.marvel-device.s5 .top-bar:before{top:-.07em}.marvel-device.s5 .top-bar:after{bottom:-.07em}.marvel-device.s5 .sleep{width:.03em;position:absolute;left:-.03em;top:1em;height:1em;background:#cecece;border-radius:.02em 0 0 .02em}.marvel-device.s5 .speaker{width:.68em;left:50%;margin-left:-.34em;background-color:#bcbcbc;background-position:0 0;border-radius:.04em}.marvel-device.s5 .sensor,.marvel-device.s5 .speaker{height:.08em;position:absolute;top:.2em;display:block;z-index:3}.marvel-device.s5 .sensor{right:1.1em;background:#3c3d3d;border-radius:100%;width:.08em}.marvel-device.s5 .sensor:after{content:"";top:0;right:.12em;background:#3c3d3d;width:.08em;height:.08em}.marvel-device.s5 .camera,.marvel-device.s5 .sensor:after{display:block;position:absolute;border-radius:100%;z-index:3}.marvel-device.s5 .camera{top:.24em;right:.42em;background:#000;width:.1em;height:.1em}.marvel-device.s5 .camera:before{width:.04em;height:.04em;background:#3c3d3d;border-radius:100%;position:absolute;content:"";top:50%;left:50%;margin-top:-.02em;margin-left:-.02em}.marvel-device.s5 .home{position:absolute;z-index:3;bottom:.17em;left:50%;width:.7em;height:.2em;background:#fff;border-radius:.18em;display:block;margin-left:-.35em;border:.02em solid #000}.marvel-device.s5.landscape{padding:.18em .6em;height:3.2em;width:5.68em}.marvel-device.s5.landscape:after,.marvel-device.s5.landscape:before{height:calc(100% - .52em);width:.26em;border-radius:.4em/5em;-webkit-transform:translateY(-50%);transform:translateY(-50%)}.marvel-device.s5.landscape:before{top:50%;left:-.07em}.marvel-device.s5.landscape:after{top:50%;left:auto;right:-.07em}.marvel-device.s5.landscape .top-bar:after,.marvel-device.s5.landscape .top-bar:before{width:.26em;height:calc(100% - .48em);border-radius:.4em/5em;-webkit-transform:translateY(-50%);transform:translateY(-50%)}.marvel-device.s5.landscape .top-bar:before{right:-.07em;top:50%;left:auto}.marvel-device.s5.landscape .top-bar:after{left:-.07em;top:50%;right:auto}.marvel-device.s5.landscape .sleep{height:.03em;width:1em;left:calc(100% - 2em);top:-.03em;border-radius:.02em .02em 0 0}.marvel-device.s5.landscape .speaker{height:.68em;width:.08em;left:calc(100% - .2em);top:50%;margin-left:0;margin-top:-.34em}.marvel-device.s5.landscape .sensor{right:.2em;top:calc(100% - 1.1em)}.marvel-device.s5.landscape .sensor:after{left:-.12em;right:0}.marvel-device.s5.landscape .camera{top:calc(100% - .42em);right:.24em}.marvel-device.s5.landscape .home{width:.2em;height:.7em;bottom:50%;margin-bottom:-.35em;margin-left:0;left:.17em}.marvel-device.s5.black{background:#1e1e1e}.marvel-device.s5.black .speaker{background:#000}.marvel-device.s5.black .sleep{background:#1e1e1e}.marvel-device.s5.black .top-bar{background:radial-gradient(rgba(0,0,0,.05) 20%,transparent 60%) 0 0,radial-gradient(rgba(0,0,0,.05) 20%,transparent 60%) .03em .03em;background-color:#2c2b2c;background-size:.04em .04em}.marvel-device.s5.black .home{background:#2c2b2c}.marvel-device.lumia920{padding:.8em .35em 1.25em;background:#fd0;width:3.2em;height:5.33em;border-radius:.4em/.03em}.marvel-device.lumia920 .bottom-bar{display:none}.marvel-device.lumia920 .top-bar{width:calc(100% - .24em);height:calc(100% - .32em);position:absolute;top:.16em;left:.12em;border-radius:.24em;background:#000;z-index:1}.marvel-device.lumia920 .top-bar:before{background:#1e1e1e;display:block;content:"";width:calc(100% - .04em);height:calc(100% - .04em);top:.02em;left:.02em;position:absolute;border-radius:.22em}.marvel-device.lumia920 .volume{width:.03em;position:absolute;top:1.3em;height:1em;background:#1e1e1e;right:-.03em;border-radius:0 .02em .02em 0}.marvel-device.lumia920 .volume:before{top:1.9em}.marvel-device.lumia920 .volume:after,.marvel-device.lumia920 .volume:before{width:.03em;position:absolute;content:"";display:block;height:.5em;background:inherit;right:0;border-radius:0 .02em .02em 0}.marvel-device.lumia920 .volume:after{top:4.6em}.marvel-device.lumia920 .camera{background:#3c3d3d;width:.1em;height:.1em;position:absolute;top:.34em;right:1.3em;z-index:5;border-radius:.05em}.marvel-device.lumia920 .speaker{background:#292728;width:.64em;height:.1em;position:absolute;top:.38em;left:50%;margin-left:-.32em;border-radius:.05em;z-index:3}.marvel-device.lumia920.landscape{padding:.35em .8em .35em 1.25em;height:3.2em;width:5.68em;border-radius:.02em/1em}.marvel-device.lumia920.landscape .top-bar{height:calc(100% - .24em);width:calc(100% - .32em);left:.16em;top:.12em}.marvel-device.lumia920.landscape .volume{height:.03em;right:1.3em;width:1em;top:100%;border-radius:0 0 .02em .02em}.marvel-device.lumia920.landscape .volume:before{height:.03em;right:1.9em;top:0;width:.5em;border-radius:0 0 .02em .02em}.marvel-device.lumia920.landscape .volume:after{height:.03em;right:4.3em;top:0;width:.5em;border-radius:0 0 .02em .02em}.marvel-device.lumia920.landscape .camera{right:.3em;top:calc(100% - 1.4em)}.marvel-device.lumia920.landscape .speaker{width:.1em;height:.64em;top:50%;margin-left:0;margin-top:-.32em;left:calc(100% - .48em)}.marvel-device.lumia920.black{background:#000}.marvel-device.lumia920.white{background:#fff;box-shadow:0 .01em .02em 0 rgba(0,0,0,.2)}.marvel-device.lumia920.blue{background:#00acdd}.marvel-device.lumia920.red{background:#cc3e32}.marvel-device.htc-one{padding:.72em .25em 1em;width:3.2em;height:5.68em;background:#bebebe;border-radius:.34em}.marvel-device.htc-one:before{content:"";display:block;width:calc(100% - .04em);height:calc(100% - .04em);position:absolute;top:.02em;left:.02em;background:#adadad;border-radius:.32em}.marvel-device.htc-one:after{content:"";display:block;width:calc(100% - .08em);height:calc(100% - .08em);position:absolute;top:.04em;left:.04em;background:#eee;border-radius:.3em}.marvel-device.htc-one .top-bar{width:calc(100% - .04em);height:6.35em;position:absolute;background:#424242;top:.5em;z-index:1;left:.02em}.marvel-device.htc-one .top-bar:before{content:"";width:calc(100% - .04em);height:100%;position:absolute;background:#000;top:0;z-index:1;left:.02em}.marvel-device.htc-one .bottom-bar{display:none}.marvel-device.htc-one .speaker{top:.22em;background:radial-gradient(#343434 25%,transparent 50%) 0 0,radial-gradient(#343434 25%,transparent 50%) .04em .04em;background-size:.04em .04em;background-position:0 0}.marvel-device.htc-one .speaker,.marvel-device.htc-one .speaker:after{height:.16em;width:2.16em;display:block;position:absolute;z-index:2;left:50%;margin-left:-1.08em}.marvel-device.htc-one .speaker:after{content:"";top:6.76em;background:inherit}.marvel-device.htc-one .camera{display:block;position:absolute;top:.18em;right:.38em;background:#3c3d3d;border-radius:100%;width:.24em;height:.24em;z-index:3}.marvel-device.htc-one .camera:before{width:.08em;height:.08em;background:#000;border-radius:100%;position:absolute;content:"";top:50%;left:50%;margin-top:-.04em;margin-left:-.04em}.marvel-device.htc-one .sensor{top:.29em;left:.6em}.marvel-device.htc-one .sensor,.marvel-device.htc-one .sensor:after{display:block;position:absolute;background:#3c3d3d;border-radius:100%;width:.08em;height:.08em;z-index:3}.marvel-device.htc-one .sensor:after{content:"";top:0;right:.12em}.marvel-device.htc-one.landscape{padding:.25em .72em .25em 1em;height:3.2em;width:5.68em}.marvel-device.htc-one.landscape .top-bar{height:calc(100% - .04em);width:6.35em;left:calc(100% - 6.85em);top:.02em}.marvel-device.htc-one.landscape .speaker{width:.16em;height:2.16em;left:calc(100% - .38em);top:50%;margin-left:0;margin-top:-1.08em}.marvel-device.htc-one.landscape .speaker:after{width:.16em;height:2.16em;left:calc(100% - 6.92em);top:50%;margin-left:0;margin-top:-1.08em}.marvel-device.htc-one.landscape .camera{right:.18em;top:calc(100% - .38em)}.marvel-device.htc-one.landscape .sensor{left:calc(100% - .29em);top:.6em}.marvel-device.htc-one.landscape .sensor :after{right:0;top:-.12em}.marvel-device.ipad{width:5.76em;height:7.68em;padding:.9em .25em;background:#242324;border-radius:.44em}.marvel-device.ipad:before{width:calc(100% - .08em);height:calc(100% - .08em);position:absolute;content:"";display:block;top:.04em;left:.04em;border-radius:.4em;background:#1e1e1e}.marvel-device.ipad .camera{background:#3c3d3d;width:.1em;height:.1em;position:absolute;top:.44em;left:50%;margin-left:-.05em;border-radius:100%}.marvel-device.ipad .bottom-bar,.marvel-device.ipad .top-bar{display:none}.marvel-device.ipad .home{background:#242324;border-radius:.36em;width:.5em;height:.5em;position:absolute;left:50%;margin-left:-.25em;bottom:.22em}.marvel-device.ipad .home:after{width:.15em;height:.15em;margin-top:-.08em;margin-left:-.08em;border:.01em solid hsla(0,0%,100%,.1);border-radius:.04em;position:absolute;display:block;content:"";top:50%;left:50%}.marvel-device.ipad.landscape{height:5.76em;width:7.68em;padding:.25em .9em}.marvel-device.ipad.landscape .camera{left:calc(100% - .44em);top:50%;margin-left:0;margin-top:-.05em}.marvel-device.ipad.landscape .home{top:50%;left:.22em;margin-left:0;margin-top:-.25em}.marvel-device.ipad.silver{background:#bcbcbc}.marvel-device.ipad.silver:before{background:#fcfcfc}.marvel-device.ipad.silver .home{background:#fcfcfc;box-shadow:inset 0 0 0 .01em #bcbcbc}.marvel-device.ipad.silver .home:after{border:.01em solid rgba(0,0,0,.2)}.marvel-device.macbook{width:9.6em;height:6em;padding:.44em .44em .76em;margin:0 auto;background:#bebebe;border-radius:.34em}.marvel-device.macbook:before{width:calc(100% - .08em);height:calc(100% - .08em);position:absolute;content:"";display:block;top:.04em;left:.04em;border-radius:.3em;background:#1e1e1e}.marvel-device.macbook .top-bar{width:calc(100% + 1.4em);height:.4em;position:absolute;content:"";display:block;top:6.8em;left:-.7em;border-bottom-left-radius:.9em .18em;border-bottom-right-radius:.9em .18em;background:#bebebe;box-shadow:inset 0 -.04em .13em .03em rgba(34,34,34,.6)}.marvel-device.macbook .top-bar:before{width:100%;height:.24em;content:"";display:block;top:0;left:0;background:#f0f0f0;border-bottom:.02em solid #aaa;border-radius:.05em;position:relative}.marvel-device.macbook .top-bar:after{width:16%;height:.14em;content:"";display:block;top:0;background:#ddd;position:absolute;margin-left:auto;margin-right:auto;left:0;right:0;border-radius:0 0 .2em .2em;box-shadow:inset 0 -.03em .1em #999}.marvel-device.macbook .bottom-bar{background:transparent;width:calc(100% + 1.4em);height:.26em;position:absolute;content:"";display:block;top:6.8em;left:-.7em}.marvel-device.macbook .bottom-bar:after,.marvel-device.macbook .bottom-bar:before{height:calc(100% - .02em);width:.8em;content:"";display:block;top:0;position:absolute}.marvel-device.macbook .bottom-bar:before{left:0;background:#f0f0f0;background:linear-gradient(90deg,#747474 0,#c3c3c3 5%,#ebebeb 14%,#979797 41%,#f0f0f0 80%,#f0f0f0 100%,#f0f0f0 0)}.marvel-device.macbook .bottom-bar:after{right:0;background:#f0f0f0;background:linear-gradient(90deg,#f0f0f0 0,#f0f0f0 0,#f0f0f0 20%,#979797 59%,#ebebeb 86%,#c3c3c3 95%,#747474)}.marvel-device.macbook .camera{background:#3c3d3d;width:.1em;height:.1em;position:absolute;top:.2em;left:50%;margin-left:-.05em;border-radius:100%}.marvel-device.macbook .home{display:none}.marvel-device.iphone-x{width:3.75em;height:8.12em;padding:.26em;background:#fdfdfd;box-shadow:inset 0 0 .11em 0 #000;border-radius:.66em}.marvel-device.iphone-x .overflow{width:100%;height:100%;position:absolute;top:0;left:0;border-radius:.66em;overflow:hidden}.marvel-device.iphone-x .shadow{border-radius:100%;width:.9em;height:.9em;position:absolute;background:radial-gradient(ellipse at center,rgba(0,0,0,.6) 0,hsla(0,0%,100%,0) 60%)}.marvel-device.iphone-x .shadow--tl{top:-.2em;left:-.2em}.marvel-device.iphone-x .shadow--tr{top:-.2em;right:-.2em}.marvel-device.iphone-x .shadow--bl{bottom:-.2em;left:-.2em}.marvel-device.iphone-x .shadow--br{bottom:-.2em;right:-.2em}.marvel-device.iphone-x:before{width:calc(100% - .1em);height:calc(100% - .1em);position:absolute;top:.05em;content:"";left:.05em;border-radius:.61em;background:#000;z-index:1}.marvel-device.iphone-x .inner-shadow{width:calc(100% - .2em);height:calc(100% - .2em);position:absolute;top:.1em;overflow:hidden;left:.1em;border-radius:.56em;box-shadow:inset 0 0 .15em 0 hsla(0,0%,100%,.66);z-index:1}.marvel-device.iphone-x .inner-shadow:before{box-shadow:inset 0 0 .2em 0 #fff;width:100%;height:116%;position:absolute;top:-8%;content:"";left:0;border-radius:2em/1.12em;z-index:2}.marvel-device.iphone-x .screen{border-radius:.4em;box-shadow:none}.marvel-device.iphone-x .bottom-bar,.marvel-device.iphone-x .top-bar{width:100%;position:absolute;height:.08em;background:rgba(0,0,0,.1);left:0}.marvel-device.iphone-x .top-bar{top:.8em}.marvel-device.iphone-x .bottom-bar{bottom:.8em}.marvel-device.iphone-x .sleep,.marvel-device.iphone-x .volume,.marvel-device.iphone-x .volume:after,.marvel-device.iphone-x .volume:before{width:.03em;background:#b5b5b5;position:absolute}.marvel-device.iphone-x .volume{left:-.03em;top:1.16em;height:.32em}.marvel-device.iphone-x .volume:before{height:.62em;top:.62em;content:"";left:0}.marvel-device.iphone-x .volume:after{height:.62em;top:1.4em;content:"";left:0}.marvel-device.iphone-x .sleep{height:.96em;top:2em;right:-.03em}.marvel-device.iphone-x .camera{width:.06em;height:.06em;top:.09em;border-radius:100%;position:absolute;left:1.54em;background:#0d4d71}.marvel-device.iphone-x .speaker{height:.06em;width:.6em;left:50%;position:absolute;top:.09em;margin-left:-.3em;background:#171818;border-radius:.06em}.marvel-device.iphone-x .notch{position:absolute;width:2.1em;height:.3em;top:.26em;left:1.08em;z-index:4;background:#000;border-bottom-left-radius:.24em;border-bottom-right-radius:.24em}.marvel-device.iphone-x .notch:after,.marvel-device.iphone-x .notch:before{content:"";height:.08em;position:absolute;top:0;width:.08em}.marvel-device.iphone-x .notch:after{background:radial-gradient(circle at bottom left,transparent 0,transparent 70%,#000 0,#000 100%);left:-.08em}.marvel-device.iphone-x .notch:before{background:radial-gradient(circle at bottom right,transparent 0,transparent 70%,#000 0,#000 100%);right:-.08em}.marvel-device.iphone-x.landscape{height:3.75em;width:8.12em}.marvel-device.iphone-x.landscape .bottom-bar,.marvel-device.iphone-x.landscape .top-bar{width:.08em;height:100%;top:0}.marvel-device.iphone-x.landscape .top-bar{left:.8em}.marvel-device.iphone-x.landscape .bottom-bar{right:.8em;bottom:auto;left:auto}.marvel-device.iphone-x.landscape .sleep,.marvel-device.iphone-x.landscape .volume,.marvel-device.iphone-x.landscape .volume:after,.marvel-device.iphone-x.landscape .volume:before{height:.03em}.marvel-device.iphone-x.landscape .inner-shadow:before{height:100%;width:116%;left:-8%;top:0;border-radius:1.12em/2em}.marvel-device.iphone-x.landscape .volume{bottom:-.03em;top:auto;left:1.16em;width:.32em}.marvel-device.iphone-x.landscape .volume:before{width:.62em;left:.62em;top:0}.marvel-device.iphone-x.landscape .volume:after{width:.62em;left:1.4em;top:0}.marvel-device.iphone-x.landscape .sleep{width:.96em;left:2em;top:-.03em;right:auto}.marvel-device.iphone-x.landscape .camera{left:.09em;bottom:1.54em;top:auto}.marvel-device.iphone-x.landscape .speaker{width:.06em;height:.6em;left:.09em;top:50%;margin-top:-.3em;margin-left:0}.marvel-device.iphone-x.landscape .notch{height:2.1em;width:.3em;left:.26em;bottom:1.08em;top:auto;border-top-right-radius:.24em;border-bottom-right-radius:.24em;border-bottom-left-radius:0}.marvel-device.iphone-x.landscape .notch:after,.marvel-device.iphone-x.landscape .notch:before{left:0}.marvel-device.iphone-x.landscape .notch:after{background:radial-gradient(circle at bottom right,transparent 0,transparent 70%,#000 0,#000 100%);bottom:-.08em;top:auto}.marvel-device.iphone-x.landscape .notch:before{background:radial-gradient(circle at top right,transparent 0,transparent 70%,#000 0,#000 100%);top:-.08em}.marvel-device.note8{width:4em;height:8.22em;background:#000;border-radius:.34em;padding:.45em .1em}.marvel-device.note8 .overflow{width:100%;height:100%;position:absolute;top:0;left:0;border-radius:.34em;overflow:hidden}.marvel-device.note8 .speaker{height:.08em;width:.56em;left:50%;position:absolute;top:.25em;margin-left:-.28em;background:#171818;z-index:1;border-radius:.08em}.marvel-device.note8 .camera{height:.18em;width:.18em;left:.86em;top:.18em}.marvel-device.note8 .camera,.marvel-device.note8 .camera:before{position:absolute;background:#212b36;z-index:1;border-radius:100%}.marvel-device.note8 .camera:before{content:"";height:.08em;width:.08em;left:-.22em;top:.05em}.marvel-device.note8 .sensors{left:1.2em;top:.22em}.marvel-device.note8 .sensors,.marvel-device.note8 .sensors:before{height:.1em;width:.1em;position:absolute;background:#1d233b;z-index:1;border-radius:100%}.marvel-device.note8 .sensors:before{content:"";left:.18em;top:0}.marvel-device.note8 .more-sensors{height:.16em;width:.16em;left:2.85em;position:absolute;top:.18em;background:#33244a;box-shadow:0 0 0 .02em hsla(0,0%,100%,.1);z-index:1;border-radius:100%}.marvel-device.note8 .more-sensors:before{content:"";height:.11em;width:.11em;left:.4em;position:absolute;top:.04em;background:#214a61;z-index:1;border-radius:100%}.marvel-device.note8 .sleep{width:.02em;height:.56em;background:#000;position:absolute;top:2.88em;right:-.02em}.marvel-device.note8 .volume{width:.02em;height:1.2em;background:#000;position:absolute;top:1.68em;left:-.02em}.marvel-device.note8 .volume:before{content:"";top:1.68em;width:.02em;position:absolute;left:0;background:#000;height:.56em}.marvel-device.note8 .inner{width:100%;height:calc(100% - .08em);position:absolute;top:.02em;content:"";left:0;border-radius:.34em;border-top:.02em solid #9fa0a2;border-bottom:.02em solid #9fa0a2;background:#000;z-index:1;box-shadow:inset 0 0 .06em 0 hsla(0,0%,100%,.5)}.marvel-device.note8 .shadow{box-shadow:inset 0 0 .6em 0 #fff,inset 0 0 .3em 0 hsla(0,0%,100%,.5),0 0 .2em 0 #fff,0 0 .2em 0 hsla(0,0%,100%,.5);height:101%;position:absolute;top:-.5%;content:"";width:calc(100% - .2em);left:.1em;border-radius:.38em;z-index:5;pointer-events:none}.marvel-device.note8 .screen{border-radius:.14em;box-shadow:none}.marvel-device.note8.landscape{height:4em;width:8.22em;padding:.1em .45em}.marvel-device.note8.landscape .speaker{height:.56em;width:.08em;top:50%;margin-top:-.28em;margin-left:0;right:.25em;left:auto}.marvel-device.note8.landscape .camera{top:.86em;right:.18em;left:auto}.marvel-device.note8.landscape .camera:before{top:-.22em;left:.05em}.marvel-device.note8.landscape .sensors{top:1.2em;right:.22em;left:auto}.marvel-device.note8.landscape .sensors:before{top:.18em;left:0}.marvel-device.note8.landscape .more-sensors{top:2.85em;right:.18em;left:auto}.marvel-device.note8.landscape .more-sensors:before{top:.4em;left:.04em}.marvel-device.note8.landscape .sleep{bottom:-.02em;top:auto;right:2.88em;width:.56em;height:.02em}.marvel-device.note8.landscape .volume{width:1.2em;height:.02em;top:-.02em;right:1.68em;left:auto}.marvel-device.note8.landscape .volume:before{right:1.68em;left:auto;top:0;width:.56em;height:.02em}.marvel-device.note8.landscape .inner{height:100%;width:calc(100% - .08em);left:.02em;top:0;border-top:0;border-bottom:0;border-left:.02em solid #9fa0a2;border-right:.02em solid #9fa0a2}.marvel-device.note8.landscape .shadow{width:101%;height:calc(100% - .2em);left:-.5%;top:.1em}.marvel-device.iphone8{font-size:9.12201vh}@media screen and (max-aspect-ratio:423/877){.marvel-device.iphone8{font-size:21.2766vw}}.marvel-device.iphone8.landscape{font-size:18.91253vh}@media screen and (max-aspect-ratio:877/423){.marvel-device.iphone8.landscape{font-size:10.26226vw}}.marvel-device.iphone-x{font-size:9.25926vh}@media screen and (max-aspect-ratio:427/864){.marvel-device.iphone-x{font-size:21.07728vw}}.marvel-device.iphone-x.landscape{font-size:18.73536vh}@media screen and (max-aspect-ratio:864/427){.marvel-device.iphone-x.landscape{font-size:10.41667vw}}.marvel-device.ipad{font-size:8.43882vh}@media screen and (max-aspect-ratio:313/474){.marvel-device.ipad{font-size:14.377vw}}.marvel-device.ipad.landscape{font-size:12.77955vh}@media screen and (max-aspect-ratio:474/313){.marvel-device.ipad.landscape{font-size:9.49367vw}}.PlainFrame-module--container--1DSud{max-width:90vw;box-shadow:0 2vh 4vh 0 rgba(0,0,0,.2),0 3vh 10vh 0 rgba(0,0,0,.19)}.ProjectViewer-module--snap--2tMOh{scroll-snap-align:start}.ProjectViewer-module--project--1ws_g{position:relative;height:100vh;margin-top:100px;margin-bottom:100px;-webkit-scroll-snap-type:x mandatory;-ms-scroll-snap-type:x mandatory;scroll-snap-type:x mandatory;display:-webkit-flex;display:flex;overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch}@supports (-webkit-overflow-scrolling:touch){.ProjectViewer-module--project--1ws_g{-webkit-scroll-snap-type:none;-ms-scroll-snap-type:none;scroll-snap-type:none}}.ProjectViewer-module--inner-container--3erD5{position:relative;display:-webkit-flex;display:flex;-webkit-flex:1 1;flex:1 1;padding-right:20px}.ProjectViewer-module--background--UyfF5{position:absolute;top:0;left:0;bottom:0;right:0;overflow:hidden}.ProjectViewer-module--background-text--1IY7a{position:absolute;display:block;margin:0;left:15vw;bottom:0;font-size:350px;font-weight:bolder;line-height:255px;color:hsla(0,0%,100%,.06);text-transform:uppercase;letter-spacing:12.666667;white-space:nowrap}.ProjectViewer-module--background-banner--1TEAG{margin-top:24vh;padding-top:2.8vh;padding-bottom:2.8vh;height:16vh;width:100vw;background-color:#fff}.ProjectViewer-module--background-text--1IY7a.ProjectViewer-module--dark--RKwZd{color:rgba(0,0,0,.06)}.ProjectViewer-module--slide--2RL4m{position:relative;scroll-snap-align:center;height:100vh;display:-webkit-flex;display:flex;-webkit-flex-direction:column;flex-direction:column;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;align-items:center;margin-left:1vw;margin-right:1vw;-webkit-flex:1 0 auto;flex:1 0 auto}.ProjectViewer-module--first-slide--2bI8G{scroll-snap-align:start;width:80vw;max-width:600px;-webkit-justify-content:flex-start;justify-content:flex-start;-webkit-align-items:stretch;align-items:stretch;margin-left:0;margin-right:-1vw}.ProjectViewer-module--title--2zJ81{height:24vh;color:#fff;margin:0 0 0 4.1vh;display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center;font-size:8vmin;font-weight:400}@media screen and (min-width:600px) and (min-height:600px){.ProjectViewer-module--title--2zJ81{font-size:45px}}.ProjectViewer-module--title--2zJ81.ProjectViewer-module--dark--RKwZd{color:#000}.ProjectViewer-module--icon-container--1bK78{display:-webkit-flex;display:flex;padding-left:4.1vh;padding-top:2.8vh;padding-bottom:2.8vh;-webkit-align-items:center;align-items:center}.ProjectViewer-module--description--3jSLV{display:-webkit-flex;display:flex;-webkit-flex:1 1;flex:1 1;margin:0 20px;height:16vh;overflow:auto}@media screen and (max-height:600px),screen and (max-width:600px){.ProjectViewer-module--description--3jSLV{font-size:11px}}.ProjectViewer-module--keywords--2IMBB{padding-left:4.1vh;color:#fff;opacity:.8}.ProjectViewer-module--keywords--2IMBB.ProjectViewer-module--dark--RKwZd{color:#000}.ProjectViewer-module--keywords--2IMBB>li{display:inline-block;border:1px solid #fff;border-radius:5px;margin-right:10px;margin-bottom:10px;padding:5px 10px}.ProjectViewer-module--keywords--2IMBB.ProjectViewer-module--dark--RKwZd>li{border:1px solid #000}.ProjectViewer-module--scroll--1sTMu{position:absolute;bottom:20px;right:20px;letter-spacing:3px;font-size:15px;color:#fff}.ProjectViewer-module--scroll--1sTMu.ProjectViewer-module--dark--RKwZd{color:#000}@supports (padding:max(0px)){.ProjectViewer-module--inner-container--3erD5{padding-right:max(20px,env(safe-area-inset-right))}.ProjectViewer-module--title--2zJ81{margin-left:max(4.1vh,env(safe-area-inset-left))}.ProjectViewer-module--icon-container--1bK78{padding-left:max(4.1vh,env(safe-area-inset-left))}.ProjectViewer-module--keywords--2IMBB{-webkit-padding-start:max(4.1vh,env(safe-area-inset-left));padding-inline-start:max(4.1vh,env(safe-area-inset-left))}.ProjectViewer-module--scroll--1sTMu{right:max(20px,env(safe-area-inset-right))}}.index-module--header--2Vq0q{position:relative;height:100vh;height:calc(100vh - var(--vh-offset, 0px));display:-webkit-flex;display:flex;-webkit-flex-direction:column;flex-direction:column;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;align-items:center;scroll-snap-align:start;font-size:20px;text-align:center}.index-module--title--2oVtp{margin:0;font-size:28px;letter-spacing:9px;padding-left:9px;text-transform:uppercase}.index-module--description--2V8fA{font-family:Open Sans,Helvetica Neue,Arial,sans-serif;font-size:15px;letter-spacing:.12em;padding-left:.12em;color:#94a4ba;text-transform:lowercase}.index-module--description--2V8fA:before{content:"{ ";opacity:.5}.index-module--description--2V8fA:after{content:" }";opacity:.5}.index-module--social-links--3x0eV{margin-top:30px;display:-webkit-flex;display:flex}.index-module--chevron--2mV7V{position:absolute;bottom:20px;-webkit-animation:index-module--fade-top--22O2w 1s;animation:index-module--fade-top--22O2w 1s;-webkit-animation-delay:1.5s;animation-delay:1.5s;-webkit-animation-fill-mode:backwards;animation-fill-mode:backwards;-webkit-animation-iteration-count:3;animation-iteration-count:3}.index-module--wrapper--1yE-i{scroll-snap-align:start}.index-module--fade-top--22O2w{-webkit-animation:index-module--fade-top--22O2w 1s;animation:index-module--fade-top--22O2w 1s;-webkit-animation-delay:.25s;animation-delay:.25s;-webkit-animation-fill-mode:backwards;animation-fill-mode:backwards}@-webkit-keyframes index-module--fade-top--22O2w{0%{-webkit-transform:translate3d(0,-10vh,0);transform:translate3d(0,-10vh,0);opacity:0}to{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}}@keyframes index-module--fade-top--22O2w{0%{-webkit-transform:translate3d(0,-10vh,0);transform:translate3d(0,-10vh,0);opacity:0}to{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}}.index-module--fade-bottom--3NWh7{-webkit-animation:index-module--fade-bottom--3NWh7 1s;animation:index-module--fade-bottom--3NWh7 1s;-webkit-animation-delay:.25s;animation-delay:.25s;-webkit-animation-fill-mode:backwards;animation-fill-mode:backwards}@-webkit-keyframes index-module--fade-bottom--3NWh7{0%{-webkit-transform:translate3d(0,10vh,0);transform:translate3d(0,10vh,0);opacity:0}to{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}}@keyframes index-module--fade-bottom--3NWh7{0%{-webkit-transform:translate3d(0,10vh,0);transform:translate3d(0,10vh,0);opacity:0}to{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}}</style>
-    <meta name="generator" content="Gatsby 2.1.32"/><title data-react-helmet="true">Mafujul Islam { Software Engineer }</title><meta data-react-helmet="true" name="description" content="Portfolio of Software Engineer Mafujul Islam."/><meta data-react-helmet="true" property="og:title" content="Mafujul Islam { Software Engineer }"/><meta data-react-helmet="true" property="og:description" content="Portfolio of Software Engineer Mafujul Islam."/><meta data-react-helmet="true" property="og:type" content="website"/>
-    <meta data-react-helmet="true" name="twitter:card" content="summary"/>
-    <meta data-react-helmet="true" name="twitter:creator" content="@jeanregisser"/>
-    <meta data-react-helmet="true" name="twitter:title" content="Mafujul Islam { Software Engineer }"/>
-    <meta data-react-helmet="true" name="twitter:description" content="Portfolio of Software Engineer, Mafujul Islam."/>
-    <meta data-react-helmet="true" name="keywords" content="Mafujul Islam, portfolio, software, engineer, ios, android, mobile, react native"/><link rel="shortcut icon" href="/icons/icon-48x48.png?v=f909105b07feec5692adb8c1d8e204ce6c5e0bef"/><link rel="manifest" href="/manifest.webmanifest"/>
-    <meta name="theme-color" content="#fffff"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=f909105b07feec5692adb8c1d8e204ce6c5e0bef"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=f909105b07feec5692adb8c1d8e204ce6c5e0bef"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=f909105b07feec5692adb8c1d8e204ce6c5e0bef"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=f909105b07feec5692adb8c1d8e204ce6c5e0bef"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=f909105b07feec5692adb8c1d8e204ce6c5e0bef"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=f909105b07feec5692adb8c1d8e204ce6c5e0bef"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=f909105b07feec5692adb8c1d8e204ce6c5e0bef"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=f909105b07feec5692adb8c1d8e204ce6c5e0bef"/><link as="script" rel="preload" href="/component---src-pages-index-js-0843b31a17f4f5de7490.js"/><link as="script" rel="preload" href="/app-9f892de8fae9f3129e36.js"/><link as="script" rel="preload" href="/7-41b9b4110f75ed61e211.js"/><link as="script" rel="preload" href="/1-54a749d0a0f928ca54ef.js"/><link as="script" rel="preload" href="/styles-ef0cd4569ddfec88b4b6.js"/><link as="script" rel="preload" href="/webpack-runtime-caefe19ac057dcde715e.js"/><link as="fetch" rel="preload" href="/static/d/460/path---index-6a9-FNAd6GYx8jscdUwLaq3BYRRPmw.json" crossOrigin="use-credentials"/></head><body><noscript id="gatsby-noscript">This app works best with JavaScript enabled.</noscript><div id="___gatsby"><div style="outline:none" tabindex="-1" role="group"><div><main><div style="position:relative"><div class="js-color-stop index-module--wrapper--1yE-i" data-background-color="white" style="height:100vh"><div class="index-module--header--2Vq0q"><div class="index-module--fade-top--22O2w"><h1 class="index-module--title--2oVtp">Mafujul Islam</h1><p class="index-module--description--2V8fA">Software Engineer</p></div><div class="index-module--social-links--3x0eV index-module--fade-bottom--3NWh7">
+        <div class="education-row">
+            <div class="education-column">
+                <h3 class="title"> Education</h3>
 
-    <!--
-    for more icons visit:
-    https://github.com/devhammed/devhammed.github.io/blob/master/index.html
-    https://themes.gohugo.io/theme/hugo-goa/
-    -->
+                <div class="education-box">
+                    <div class="education-content">
+                        <div class="content">
+                            <div class="year"><i class='bx bxs-calendar' ></i> 2020 - 2022</div>
+                            <h3>MSc in Communication Systems and Networks</h3>
+                            <p>TH Köln - Germany</p>
+                        </div>
+                    </div>
 
-    <a class="SocialLink-module--link--3YIFO" href="https://facebook.com/mafujuls" target="_blank"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="envelope" class="svg-inline--fa fa-envelope fa-w-16 " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor"       d="M448 80v352c0 26.5-21.5 48-48 48h-85.3V302.8h60.6l8.7-67.6h-69.3V192c0-19.6 5.4-32.9 33.5-32.9H384V98.7c-6.2-.8-27.4-2.7-52.2-2.7-51.6 0-87 31.5-87 89.4v49.9H184v67.6h60.9V480H48c-26.5 0-48-21.5-48-48V80c0-26.5 21.5-48 48-48h352c26.5 0 48 21.5 48 48z"></path></svg><span class="SocialLink-module--title--24QGU">Email</span></a>
+                    <div class="education-content">
+                        <div class="content">
+                            <div class="year"><i class='bx bxs-calendar' ></i> 2014 - 2028</div>
+                            <h3>BSc in Electrical and Electronic Engineering</h3>
+                            <p>International University of Business Agriculture and Technology - Bangladesh</p>
+                        </div>
+                    </div>
 
-    <a class="SocialLink-module--link--3YIFO" href="https://twitter.com/mafujuls" target="_blank"><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="twitter" class="svg-inline--fa fa-twitter fa-w-16 " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg><span class="SocialLink-module--title--24QGU">Twitter</span></a>
+                    <div class="education-content">
+                        <div class="content">
+                            <div class="year"><i class='bx bxs-calendar' ></i> 2009 - 2013</div>
+                            <h3>Diploma in Electronic Technology</h3>
+                            <p>Dhaka Polytechnic Institute - Bangladesh </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-    <a class="SocialLink-module--link--3YIFO" href="https://github.com/mafujuls" target="_blank"><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github" class="svg-inline--fa fa-github fa-w-16 " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg><span class="SocialLink-module--title--24QGU">GitHub</span></a>
+            <div class="education-column">
+                <h3 class="title"> Experience</h3>
 
-    <a class="SocialLink-module--link--3YIFO" href="https://stackoverflow.com/users/7624402/mafujul" target="_blank"><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="stack-overflow" class="svg-inline--fa fa-stack-overflow fa-w-12 " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M290.7 311L95 269.7 86.8 309l195.7 41zm51-87L188.2 95.7l-25.5 30.8 153.5 128.3zm-31.2 39.7L129.2 179l-16.7 36.5L293.7 300zM262 32l-32 24 119.3 160.3 32-24zm20.5 328h-200v39.7h200zm39.7 80H42.7V320h-40v160h359.5V320h-40z"></path></svg><span class="SocialLink-module--title--24QGU">StackOverflow</span></a>
+                <div class="education-box">
+                    <div class="education-content">
+				
+				<div class="content">
+                                    <div class="year"><i class='bx bxs-calendar' ></i> Oct 2023 - Present</div>
+                                    <h3>Software Engineer</h3>
+                                    <p>e.solutions GmbH</p>
+                                </div>
+                            </div>
 
-    <a class="SocialLink-module--link--3YIFO" href="https://www.instagram.com/mafujuls/" target="_blank"><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="instagram" class="svg-inline--fa fa-stack-overflow fa-w-12 " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg><span class="SocialLink-module--title--24QGU">StackOverflow</span></a>
+                            <div class="education-content">
 
-    <!--
-    <a class="SocialLink-module--link--3YIFO" href="https://www.instagram.com/mafujuls/" target="_blank"><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="medium" class="svg-inline--fa fa-stack-overflow fa-w-12 " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M0 32v448h448V32H0zm372.2 106.1l-24 23c-2.1 1.6-3.1 4.2-2.7 6.7v169.3c-.4 2.6.6 5.2 2.7 6.7l23.5 23v5.1h-118V367l24.3-23.6c2.4-2.4 2.4-3.1 2.4-6.7V199.8l-67.6 171.6h-9.1L125 199.8v115c-.7 4.8 1 9.7 4.4 13.2l31.6 38.3v5.1H71.2v-5.1l31.6-38.3c3.4-3.5 4.9-8.4 4.1-13.2v-133c.4-3.7-1-7.3-3.8-9.8L75 138.1V133h87.3l67.4 148L289 133.1h83.2v5z"></path></svg><span class="SocialLink-module--title--24QGU">StackOverflow</span></a>
-    -->
+				<div class="content">
+                                    <div class="year"><i class='bx bxs-calendar' ></i> Nov 2022 - Sep 2023</div>
+                                    <h3>Software Developer</h3>
+                                    <p>Fimo Health GmbH</p>
+                                </div>
+                            </div>
 
-    <a class="SocialLink-module--link--3YIFO" href="https://www.linkedin.com/in/mafujuls" target="_blank"><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="linkedin" class="svg-inline--fa fa-linkedin fa-w-14 " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></svg><span class="SocialLink-module--title--24QGU">LinkedIn</span></a></div><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-down" class="svg-inline--fa fa-chevron-down fa-w-14 index-module--chevron--2mV7V" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-  </div>
+	
+                            <div class="education-content">
+                        	<div class="content">
+                                    <div class="year"><i class='bx bxs-calendar' ></i> Part Time - Jan 2021 - Oct 2022</div>
+                                    <h3>Software Developer</h3>
+                                    <p>Fimo Health GmbH</p>
+                                </div>
+                            </div>
+        
+                            <div class="education-content">
+                                <div class="content">
+                                    <div class="year"><i class='bx bxs-calendar' ></i> Part Time - May 2018 - Feb 2020</div>
+                                    <h3>Software Engineer</h3>
+                                    <p>IRD Foundation</p>
+                                </div>
+                            </div>
+        
+                            <div class="education-content">
+                                <div class="content">
+                                    <div class="year"><i class='bx bxs-calendar' ></i> Apr 2017 - Apr 2018</div>
+                                    <h3>Mobile Application Developer</h3>
+                                    <p>SmartDataSoftSmartDataSoft </p>
+                                </div>
+                            </div>
+        
+                            <div class="education-content">
+                                <div class="content">
+                                    <div class="year"><i class='bx bxs-calendar' ></i> Jan 2016 - Jan 2017</div>
+                                    <h3>Junior Software Engineer</h3>
+                                    <p>Technobd Web Solutions (Pvt.) Ltd.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-<!-- start game -->
 
 
-  <div class="wrapper__end-tag">&lt;/mafu&gt;</div>
-  <script src="js/particles.js"></script>
-  <script src="js/app.js"></script>
+
+
+
+<!--skills section design
+            <section class="skills" id="skills">
+                <h2 class="heading"> My <span>Skills</span></h2>
+
+                <div class="skills-row">
+                    <div class="skills-column">
+                        <h3 class="title">Analysis Skills</h3>
+
+                        <div class="skills-box">
+                            <div class="skills-content">
+                                <div class="progress">
+                                    <h3>Android <span>80%</span></h3>
+                                    <div class="bar"><span></span></div>
+                                </div>
+
+                                <div class="progress">
+                                    <h3>Kotlin <span>80%</span></h3>
+                                    <div class="bar"><span></span></div>
+                                </div>
+
+                                <div class="progress">
+                                    <h3>Java <span>70%</span></h3>
+                                    <div class="bar"><span></span></div>
+                                </div>
+
+                                <div class="progress">
+                                    <h3>Flutter <span>50%</span></h3>
+                                    <div class="bar"><span></span></div>
+                                </div>
+
+                                <div class="progress">
+                                    <h3>Dart <span>50%</span></h3>
+                                    <div class="bar"><span></span></div>
+                                </div>
+
+                                <div class="progress">
+                                    <h3>Ktor <span>50%</span></h3>
+                                    <div class="bar"><span></span></div>
+                                </div>
+
+                                <div class="progress">
+                                    <h3>SQLite <span>80%</span></h3>
+                                    <div class="bar"><span></span></div>
+                                </div>
+
+                                <div class="progress">
+                                    <h3>MongoDB <span>70%</span></h3>
+                                    <div class="bar"><span></span></div>
+                                </div>
+
+				<div class="progress">
+                                    <h3>Android <span>80%</span></h3>
+                                    <div class="bar"><span></span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+-->
+
+
+
+
+<!--Portfolio section design
+            <section class="Portfolio" id="Portfolio">
+                <h2 class="heading"> Latest <span>Project</span></h2>
+
+                <div class="Portfolio-container">
+                    <div class="Portfolio-box">
+                        <img src="images/SQL.png" alt="">
+                        <div class="Portfolio-layer">
+                            <h4>SQL Query</h4>
+                            <p>SQL Project on Gaming Data</p>
+                            <a href="https://github.com/MoamenaSamir/Gaming-Data/blob/main/SQLQuery1.sql"><i class='bx bx-link-external'></i></a>
+                        </div>
+                    </div>
+
+                    <div class="Portfolio-box">
+                        <img src="images/Airplane Crashes.png" alt="">
+                        <div class="Portfolio-layer">
+                            <h4>Power BI Dashboard</h4>
+                            <p>Power BI Project on Airplane Crashes Around The World(1980-2023)</p>
+                            <a href="https://app.powerbi.com/groups/b8ea84ec-316a-4c94-a36a-9904f1daa432/reports/27ff20be-664e-4e20-a866-f523b3e67d09/ReportSectionb546e6ee980c40b5be1c?experience=power-bi"><i class='bx bx-link-external'></i></a>
+                        </div>
+                    </div>
+
+                    <div class="Portfolio-box">
+                        <img src="images/Car Crash.png" alt="">
+                        <div class="Portfolio-layer">
+                            <h4>Power BI Dashboard</h4>
+                            <p>Power BI Project on Car Crashes in Chicago(2015-2023)</p>
+                            <a href="https://app.powerbi.com/groups/me/reports/aac5a972-5bf7-4962-9d0a-3812ebd9f219/ReportSectionda81ce80c0d133b09422?experience=power-bi"><i class='bx bx-link-external'></i></a>
+                        </div>
+                    </div>
+
+                    <div class="Portfolio-box">
+                        <img src="images/Sales.png" alt="">
+                        <div class="Portfolio-layer">
+                            <h4>Power BI Dashboard</h4>
+                            <p>Power BI Project on Electronics Shop(2021-2022)</p>
+                            <a href="https://app.powerbi.com/groups/b8ea84ec-316a-4c94-a36a-9904f1daa432/reports/cac3634a-7584-4855-9eca-a013e3efb55e/ReportSection?experience=power-bi"><i class='bx bx-link-external'></i></a>
+                        </div>
+                    </div>
+
+                    <div class="Portfolio-box">
+                        <img src="images/HR.png" alt="">
+                        <div class="Portfolio-layer">
+                            <h4>Power BI Dashboard</h4>
+                            <p>Power BI Project on HR Data</p>
+                            <a href="https://app.powerbi.com/groups/b8ea84ec-316a-4c94-a36a-9904f1daa432/reports/a9eea1a8-934e-453d-8416-8a2db43dfea5/ReportSection?experience=power-bi"><i class='bx bx-link-external'></i></a>
+                        </div>
+                    </div>
+
+                    <div class="Portfolio-box">
+                        <img src="images/Global product.png" alt="">
+                        <div class="Portfolio-layer">
+                            <h4>Tableau Dashboard</h4>
+                            <p>Tableau Project on Global Product Sales</p>
+                            <a href="https://public.tableau.com/app/profile/moamena.samir8558/viz/OrdersOfProducts/Dashboard1"><i class='bx bx-link-external'></i></a>
+                        </div>
+                    </div>
+
+                    <div class="Portfolio-box">
+                        <img src="images/Population.png" alt="">
+                        <div class="Portfolio-layer">
+                            <h4>Tableau Dashboard</h4>
+                            <p>Tableau Project on World Population Census</p>
+                            <a href="https://public.tableau.com/app/profile/moamena.samir8558/viz/thecountryspopulation/Dashboard2"><i class='bx bx-link-external'></i></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+-->
+
+
+
+
+
+
+
+            <!--footer design-->
+            <footer class="footer">
+                <div class="footer-text">
+                    <p>Mafu.</p>
+                </div>
+
+                <div class="footer-iconTop">
+                    <a href="#"><i class="bx bx-up-arrow-alt"></i></a>
+                </div>
+            </footer>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
