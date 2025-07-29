@@ -1,2 +1,2 @@
 # Mafujul Islam
-My portfolio website (https://mafs.me).
+My portfolio website (https://mafu.me).
