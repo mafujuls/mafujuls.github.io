@@ -1,391 +1,844 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-  <!-- Common Tags -->
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Mafujul Islam | Software Engineer</title>
-  <!-- Search Engine -->
-  <meta name="description" content="Hi, I'm a passionate and amazing Software Engineer from Bangladesh && Senior Software Engineer @ e.solutions GmbH.">
-  <meta name="image" content="https://mafujuls.github.io/img/me.jpg">
-  <!-- Schema.org for Google -->
-  <meta itemprop="name" content="Mafujul Islam (@mafujuls) | Software Engineer">
-  <meta itemprop="description" content="Hi, I'm a passionate and amazing Software Engineer from Bangladesh && Senior Software Engineer @ e.solutions GmbH.">
-  <meta itemprop="image" content="https://mafujuls.github.io/img/me.jpg">
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Mafujul Islam (@mafujuls) | Software Engineer">
-  <meta name="twitter:description" content="Hi, I'm a passionate and amazing Software Engineer from Bangladesh && Senior Software Engineer @ e.solutions GmbH.">
-  <meta name="twitter:site" content="@mafujuls">
-  <meta name="twitter:creator" content="@mafujuls">
-  <meta name="twitter:image:src" content="https://mafujuls.github.io/img/me.jpg">
-  <!-- Open Graph general (Facebook, Pinterest & Google+) -->
-  <meta name="og:title" content="Mafujul Islam (@mafujuls) | Software Engineer">
-  <meta name="og:description" content="Hi, I'm a passionate and amazing Software Engineer from Bangladesh && Software Engineer @ e.solutions GmbH">
-  <meta name="og:image" content="https://mafujuls.github.io/img/me.jpg">
-  <meta name="og:url" content="https://mafujuls.github.io">
-  <meta name="og:site_name" content="Mafujul Islam (@mafujuls) | Software Engineer">
-  <meta name="og:locale" content="en_UK">
-  <meta name="fb:admins" content="100008645012654">
-  <meta name="og:type" content="website">
-
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=decive-width, initial-scale=1.0">
-    <title>Mafujul Islam | Software Engineer</title>
-    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mafujul Islam - Interactive Terminal Portfolio">
+    <title>mafujul@terminal ~ $</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
-    <!--box icons-->
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-5LWBP5FK');</script>
-<!-- End Google Tag Manager -->
+        :root {
+            --bg: #0d1117;
+            --text: #c9d1d9;
+            --green: #39d353;
+            --blue: #58a6ff;
+            --cyan: #56d4dd;
+            --yellow: #f0883e;
+            --red: #f85149;
+            --gray: #8b949e;
+        }
 
+        body {
+            font-family: 'JetBrains Mono', monospace;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            overflow: hidden;
+            height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            margin-bottom: 2rem;
+        }
+
+        .header h1 {
+            color: var(--green);
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .header p {
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        .terminal {
+            flex: 1;
+            overflow-y: auto;
+            padding-bottom: 2rem;
+            scroll-behavior: smooth;
+        }
+
+        .terminal::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .terminal::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        .terminal::-webkit-scrollbar-thumb {
+            background: var(--gray);
+            border-radius: 4px;
+        }
+
+        .output-line {
+            margin-bottom: 0.5rem;
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-5px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .prompt {
+            color: var(--blue);
+        }
+
+        .command {
+            color: var(--green);
+        }
+
+        .input-line {
+            display: flex;
+            align-items: center;
+            margin-top: 1rem;
+        }
+
+        .input-prompt {
+            color: var(--blue);
+            margin-right: 0.5rem;
+            user-select: none;
+        }
+
+        #command-input {
+            background: transparent;
+            border: none;
+            outline: none;
+            color: var(--text);
+            font-family: inherit;
+            font-size: 1rem;
+            flex: 1;
+            caret-color: var(--green);
+        }
+
+        .cursor {
+            display: inline-block;
+            width: 10px;
+            height: 20px;
+            background-color: var(--green);
+            animation: blink 1s step-end infinite;
+            margin-left: 2px;
+        }
+
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+
+        .success {
+            color: var(--green);
+        }
+
+        .error {
+            color: var(--red);
+        }
+
+        .info {
+            color: var(--blue);
+        }
+
+        .warning {
+            color: var(--yellow);
+        }
+
+        .muted {
+            color: var(--gray);
+        }
+
+        .highlight {
+            color: var(--cyan);
+        }
+
+        table {
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+
+        td {
+            padding: 0.25rem 1rem 0.25rem 0;
+        }
+
+        .skill-bar {
+            display: flex;
+            align-items: center;
+            margin: 0.5rem 0;
+        }
+
+        .skill-name {
+            min-width: 150px;
+            color: var(--text);
+        }
+
+        .bar {
+            flex: 1;
+            max-width: 300px;
+            height: 20px;
+            background: #1f2937;
+            border-radius: 4px;
+            overflow: hidden;
+            margin-right: 1rem;
+        }
+
+        .bar-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--green), var(--cyan));
+            transition: width 1s ease;
+        }
+
+        .percentage {
+            color: var(--gray);
+            min-width: 40px;
+        }
+
+        a {
+            color: var(--blue);
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: var(--cyan);
+            text-decoration: underline;
+        }
+
+        .ascii-art {
+            color: var(--green);
+            line-height: 1.2;
+            font-size: 0.8rem;
+        }
+
+        .help-section {
+            margin: 1rem 0;
+        }
+
+        .help-command {
+            color: var(--cyan);
+            display: inline-block;
+            min-width: 150px;
+        }
+
+        .help-desc {
+            color: var(--gray);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            .header h1 {
+                font-size: 1rem;
+            }
+
+            body {
+                font-size: 0.9rem;
+            }
+
+            .skill-name {
+                min-width: 100px;
+            }
+
+            .bar {
+                max-width: 150px;
+            }
+        }
+    </style>
 </head>
-
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5LWBP5FK"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+    <div class="container">
+        <div class="header">
+            <h1>Mafujul Islam - Interactive Terminal Portfolio</h1>
+            <p>Type '<span class="success">help</span>' to see available commands</p>
+        </div>
 
-    <!--header design-->
-    <header class="header">
-        <a href="#" class="logo">Mafu.</a>
-
-        <div class="bx bx-menu" id="menu-icon"></div>
-
-        <nav class="navbar">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#education">Journey</a>
-            <!-- <a href="#skills">Skills</a> -->
-            <!-- <a href="#Portfolio">Portfolio</a> -->
-
-            <span class="active-nav"></span>
-        </nav>
-    </header>
-    
-    <!--home section design-->
-    <section class="home" id="home">
-        <div class="home-content">
-            <h1>Hi, I'm <span>Mafujul Islam</span> </h1>
-            <div class="text-animate">
-                <h3>Software Engineer</h3>
-            </div>
-            <p>Human | Mobile Application Developer | Kotlin and Java Developer</p>
-
-            <div class="btn-box">
-                <a href="https://coseries.com/author/mafs/" target="_blank" class="btn">Blog</a>
-                <a href="mailto:mafujulswe@gmail.com" class="btn">Let's Talk</a>
+        <div class="terminal" id="terminal">
+            <div class="output-line">
+                <span class="muted">Welcome! Type a command or 'help' to get started.</span>
             </div>
         </div>
 
-        <div class="home-sci">
-            <!--<a href="mailto:mafujulswe@gmail.com"><i class='bx bxl-gmail'></i></a>-->
-            <a href="https://github.com/mafujuls" target="_blank"><i class='bx bxl-github'></i></a>
-            <a href="https://www.linkedin.com/in/mafujuls/" target="_blank"><i class='bx bxl-linkedin'></i></a>
-            <a href="https://www.facebook.com/mafujuls/" target="_blank"><i class='bx bxl-facebook'></i></a>
-            <a href="https://www.twitter.com/mafujuls/" target="_blank"><i class='bx bxl-twitter'></i></a>
-            <a href="https://stackoverflow.com/users/7624402/mafujul" target="_blank"><i class='bx bxl-stack-overflow'></i></a>
-            <a href="https://www.instagram.com/mafujuls" target="_blank"><i class='bx bxl-instagram'></i></a>
-            <a href="https://www.youtube.com/@mafujuls" target="_blank"><i class='bx bxl-youtube'></i></a>
-
+        <div class="input-line">
+            <span class="input-prompt">visitor@mafujul:~$</span>
+            <input type="text" id="command-input" autofocus autocomplete="off" spellcheck="false">
+            <span class="cursor"></span>
         </div>
+    </div>
 
-        <div class="home-imgHover"></div>
-    </section>
+    <script>
+        const terminal = document.getElementById('terminal');
+        const commandInput = document.getElementById('command-input');
+        let commandHistory = [];
+        let historyIndex = -1;
 
-    <!--about section desgin-->
-    <section class="about" id="about">
-        <h2 class="heading">About <span>Me</span></h2>
+        // Focus input on page click
+        document.addEventListener('click', () => commandInput.focus());
 
-        <div class="about-img">
-            <img src="images/profile.jpg" alt="">
-            <span class="circle-spin"></span>
-        </div>
+        // Command data
+        const commands = {
+            help: {
+                description: 'Show all available commands',
+                execute: () => {
+                    return `
+<div class="help-section">
+  <div><span class="help-command">help</span><span class="help-desc">Show this help message</span></div>
+  <div><span class="help-command">about</span><span class="help-desc">About me</span></div>
+  <div><span class="help-command">whoami</span><span class="help-desc">Who am I?</span></div>
+  <div><span class="help-command">experience</span><span class="help-desc">My work experience</span></div>
+  <div><span class="help-command">education</span><span class="help-desc">My educational background</span></div>
+  <div><span class="help-command">skills</span><span class="help-desc">My technical skills</span></div>
+  <div><span class="help-command">tech</span><span class="help-desc">Technologies, tools & frameworks</span></div>
+  <div><span class="help-command">contact</span><span class="help-desc">How to connect with me</span></div>
+  <div><span class="help-command">projects</span><span class="help-desc">View my projects</span></div>
+  <div><span class="help-command">github</span><span class="help-desc">Open GitHub profile</span></div>
+  <div><span class="help-command">linkedin</span><span class="help-desc">Open LinkedIn profile</span></div>
+  <div><span class="help-command">twitter</span><span class="help-desc">Open Twitter profile</span></div>
+  <div><span class="help-command">instagram</span><span class="help-desc">Open Instagram profile</span></div>
+  <div><span class="help-command">stackoverflow</span><span class="help-desc">Open Stack Overflow profile</span></div>
+  <div><span class="help-command">clear</span><span class="help-desc">Clear the terminal</span></div>
+  <div><span class="help-command">history</span><span class="help-desc">Show command history</span></div>
+  <div><span class="help-command">banner</span><span class="help-desc">Display ASCII banner</span></div>
+</div>`;
+                }
+            },
 
-        <div class="about-content">
-            <h3>Software Engineer!</h3>
-            <p>
-		Hi there! I'm Mafujul, a passionate software engineer with a strong background in Mobile App Development. Originally from Bangladesh, but currently based in Germany, I've been honing my skills in the tech industry for more than 8 years, with a focus on crafting user-friendly and innovative Mobile and In Vehicle Infotainment app solutions.
-<br>
+            about: {
+                description: 'About me',
+                execute: () => {
+                    return `
+<div class="success">Mafujul Islam</div>
+<div class="muted">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</div>
 
-I hold a BSc in Engineering and recently completed my MSc in Engineering, both of which have equipped me with a solid foundation for tackling complex technical challenges.
+<div style="margin: 1rem 0;">
+  <div><span class="info">Role:</span> Mobile Application Developer | Software Engineer</div>
+  <div><span class="info">Location:</span> Nürnberg, Germany 🇩🇪</div>
+  <div><span class="info">Origin:</span> Bangladesh 🇧🇩</div>
+  <div><span class="info">Experience:</span> 8+ years</div>
+  <div><span class="info">Company:</span> e.solutions GmbH</div>
+  <div><span class="info">Specialties:</span> Android Native, Kotlin Multiplatform, Android Auto, In-Vehicle Infotainment</div>
+</div>
 
+<div class="muted">
+With over 8 years of industry experience, I specialize in mobile application
+development with a focus on Android native development using Kotlin and Java,
+as well as cross-platform solutions with Flutter and Kotlin Multiplatform.
+Currently working on cutting-edge in-vehicle infotainment systems and Android Auto
+applications at e.solutions GmbH.
+</div>
 
-        </p>
-            
-            <div class="btn-box btns">
-                <a href="https://www.linkedin.com/in/mafujuls/" target="_blank" class="btn">Know More</a>
-            </div>
-        </div>
-    </section>
+<div style="margin-top: 1rem;" class="highlight">
+"ⓉⓇⓎⒾⓃⒼ ⓉⓄ ⒺⓃⒿⓄⓎ ⓈⒾⓁⒺⓃⒸⒺ"
+</div>`;
+                }
+            },
 
-    <!--Education section design-->
-    <section class="education" id="education">
-        <h2 class="heading">My <span>Journey</span></h2>
+            whoami: {
+                description: 'Who am I?',
+                execute: () => {
+                    return `<div class="success">Mafujul Islam</div>
+<div class="muted">Mobile Application Developer with 8+ years of experience</div>`;
+                }
+            },
 
-        <div class="education-row">
-            <div class="education-column">
-                <h3 class="title"> Education</h3>
+            experience: {
+                description: 'Work experience',
+                execute: () => {
+                    return `
+<div class="success">Work Experience</div>
+<div class="muted">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</div>
 
-                <div class="education-box">
-                    <div class="education-content">
-                        <div class="content">
-                            <div class="year"><i class='bx bxs-calendar' ></i> 2020 - 2022</div>
-                            <h3>MSc in Communication Systems and Networks</h3>
-                            <p>TH Köln - Germany</p>
-                        </div>
-                    </div>
+<div style="margin: 1rem 0;">
+  <div class="info">Software Engineer</div>
+  <div class="muted">e.solutions GmbH | Oct 2023 - Present</div>
+  <div style="margin-left: 1rem; margin-top: 0.5rem;">
+    <div class="muted">• Developing in-vehicle infotainment solutions</div>
+    <div class="muted">• Tech: Kotlin, Android, Automotive, IVI Systems</div>
+  </div>
+</div>
 
-                    <div class="education-content">
-                        <div class="content">
-                            <div class="year"><i class='bx bxs-calendar' ></i> 2014 - 2028</div>
-                            <h3>BSc in Electrical and Electronic Engineering</h3>
-                            <p>International University of Business Agriculture and Technology - Bangladesh</p>
-                        </div>
-                    </div>
+<div style="margin: 1rem 0;">
+  <div class="info">Software Developer</div>
+  <div class="muted">Fimo Health GmbH | Nov 2022 - Sep 2023</div>
+  <div style="margin-left: 1rem; margin-top: 0.5rem;">
+    <div class="muted">• Full-time mobile development for health tech</div>
+    <div class="muted">• Tech: Kotlin, Android, HealthTech</div>
+  </div>
+</div>
 
-                    <div class="education-content">
-                        <div class="content">
-                            <div class="year"><i class='bx bxs-calendar' ></i> 2009 - 2013</div>
-                            <h3>Diploma in Electronic Technology</h3>
-                            <p>Dhaka Polytechnic Institute - Bangladesh </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<div style="margin: 1rem 0;">
+  <div class="info">Part-time Software Developer</div>
+  <div class="muted">Fimo Health GmbH | Jan 2021 - Oct 2022</div>
+  <div style="margin-left: 1rem; margin-top: 0.5rem;">
+    <div class="muted">• Mobile app development while pursuing master's</div>
+  </div>
+</div>
 
-            <div class="education-column">
-                <h3 class="title"> Experience</h3>
+<div style="margin: 1rem 0;">
+  <div class="info">Part-time Software Engineer</div>
+  <div class="muted">IRD Foundation | May 2018 - Feb 2020</div>
+</div>
 
-                <div class="education-box">
-                    <div class="education-content">
-				
-				<div class="content">
-                                    <div class="year"><i class='bx bxs-calendar' ></i> Oct 2023 - Present</div>
-                                    <h3>Software Engineer</h3>
-                                    <p>e.solutions GmbH</p>
-                                </div>
-                            </div>
+<div style="margin: 1rem 0;">
+  <div class="info">Mobile Application Developer</div>
+  <div class="muted">SmartDataSoft | Apr 2017 - Apr 2018</div>
+</div>
 
-                            <div class="education-content">
+<div style="margin: 1rem 0;">
+  <div class="info">Junior Software Engineer</div>
+  <div class="muted">Technobd Web Solutions | Jan 2016 - Jan 2017</div>
+</div>
 
-				<div class="content">
-                                    <div class="year"><i class='bx bxs-calendar' ></i> Nov 2022 - Sep 2023</div>
-                                    <h3>Software Developer</h3>
-                                    <p>Fimo Health GmbH</p>
-                                </div>
-                            </div>
+<div style="margin-top: 1rem;" class="highlight">
+Total: 8+ years of professional development experience
+</div>`;
+                }
+            },
 
-	
-                            <div class="education-content">
-                        	<div class="content">
-                                    <div class="year"><i class='bx bxs-calendar' ></i> Part Time - Jan 2021 - Oct 2022</div>
-                                    <h3>Software Developer</h3>
-                                    <p>Fimo Health GmbH</p>
-                                </div>
-                            </div>
-        
-                            <div class="education-content">
-                                <div class="content">
-                                    <div class="year"><i class='bx bxs-calendar' ></i> Part Time - May 2018 - Feb 2020</div>
-                                    <h3>Software Engineer</h3>
-                                    <p>IRD Foundation</p>
-                                </div>
-                            </div>
-        
-                            <div class="education-content">
-                                <div class="content">
-                                    <div class="year"><i class='bx bxs-calendar' ></i> Apr 2017 - Apr 2018</div>
-                                    <h3>Mobile Application Developer</h3>
-                                    <p>SmartDataSoftSmartDataSoft </p>
-                                </div>
-                            </div>
-        
-                            <div class="education-content">
-                                <div class="content">
-                                    <div class="year"><i class='bx bxs-calendar' ></i> Jan 2016 - Jan 2017</div>
-                                    <h3>Junior Software Engineer</h3>
-                                    <p>Technobd Web Solutions (Pvt.) Ltd.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            education: {
+                description: 'Educational background',
+                execute: () => {
+                    return `
+<div class="success">Education</div>
+<div class="muted">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</div>
 
+<div style="margin: 1rem 0;">
+  <div class="info">🎓 MSc in Communication Systems and Networks</div>
+  <div class="muted">TH Köln - University of Applied Sciences</div>
+  <div class="muted">2020 - 2022 | Germany 🇩🇪</div>
+</div>
 
+<div style="margin: 1rem 0;">
+  <div class="info">🎓 BSc in Electrical and Electronic Engineering</div>
+  <div class="muted">International University of Business Agriculture and Technology</div>
+  <div class="muted">2014 - 2018 | Bangladesh 🇧🇩</div>
+</div>
 
+<div style="margin: 1rem 0;">
+  <div class="info">📜 Diploma in Electronic Technology</div>
+  <div class="muted">Dhaka Polytechnic Institute</div>
+  <div class="muted">2009 - 2013 | Bangladesh 🇧🇩</div>
+</div>`;
+                }
+            },
 
+            skills: {
+                description: 'Technical skills',
+                execute: () => {
+                    setTimeout(() => {
+                        document.querySelectorAll('.bar-fill').forEach(bar => {
+                            bar.style.width = bar.dataset.width;
+                        });
+                    }, 100);
 
+                    return `
+<div class="success">Technical Skills</div>
+<div class="muted">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</div>
 
-<!--skills section design
-            <section class="skills" id="skills">
-                <h2 class="heading"> My <span>Skills</span></h2>
+<div style="margin: 1rem 0;">
+  <div class="info">Mobile Development</div>
+  <div class="skill-bar">
+    <span class="skill-name">Kotlin</span>
+    <div class="bar"><div class="bar-fill" data-width="95%" style="width: 0%"></div></div>
+    <span class="percentage">95%</span>
+  </div>
+  <div class="skill-bar">
+    <span class="skill-name">Java</span>
+    <div class="bar"><div class="bar-fill" data-width="95%" style="width: 0%"></div></div>
+    <span class="percentage">95%</span>
+  </div>
+  <div class="skill-bar">
+    <span class="skill-name">Android SDK</span>
+    <div class="bar"><div class="bar-fill" data-width="90%" style="width: 0%"></div></div>
+    <span class="percentage">90%</span>
+  </div>
+  <div class="skill-bar">
+    <span class="skill-name">Flutter</span>
+    <div class="bar"><div class="bar-fill" data-width="80%" style="width: 0%"></div></div>
+    <span class="percentage">80%</span>
+  </div>
+  <div class="skill-bar">
+    <span class="skill-name">Dart</span>
+    <div class="bar"><div class="bar-fill" data-width="80%" style="width: 0%"></div></div>
+    <span class="percentage">80%</span>
+  </div>
+</div>
 
-                <div class="skills-row">
-                    <div class="skills-column">
-                        <h3 class="title">Analysis Skills</h3>
+<div style="margin: 1rem 0;">
+  <div class="info">Technologies & Frameworks</div>
+  <div class="skill-bar">
+    <span class="skill-name">Kotlin Multiplatform</span>
+    <div class="bar"><div class="bar-fill" data-width="75%" style="width: 0%"></div></div>
+    <span class="percentage">75%</span>
+  </div>
+  <div class="skill-bar">
+    <span class="skill-name">Jetpack Compose</span>
+    <div class="bar"><div class="bar-fill" data-width="85%" style="width: 0%"></div></div>
+    <span class="percentage">85%</span>
+  </div>
+  <div class="skill-bar">
+    <span class="skill-name">MVVM Architecture</span>
+    <div class="bar"><div class="bar-fill" data-width="90%" style="width: 0%"></div></div>
+    <span class="percentage">90%</span>
+  </div>
+  <div class="skill-bar">
+    <span class="skill-name">Coroutines/RxJava</span>
+    <div class="bar"><div class="bar-fill" data-width="85%" style="width: 0%"></div></div>
+    <span class="percentage">85%</span>
+  </div>
+</div>
 
-                        <div class="skills-box">
-                            <div class="skills-content">
-                                <div class="progress">
-                                    <h3>Android <span>80%</span></h3>
-                                    <div class="bar"><span></span></div>
-                                </div>
+<div style="margin: 1rem 0;">
+  <div class="info">Other Skills</div>
+  <div class="muted">• Python • Git & Version Control • CI/CD • Agile/Scrum</div>
+</div>`;
+                }
+            },
 
-                                <div class="progress">
-                                    <h3>Kotlin <span>80%</span></h3>
-                                    <div class="bar"><span></span></div>
-                                </div>
+            tech: {
+                description: 'Technologies, tools & frameworks',
+                execute: () => {
+                    return `
+<div class="success">Technologies, Tools & Frameworks</div>
+<div class="muted">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</div>
 
-                                <div class="progress">
-                                    <h3>Java <span>70%</span></h3>
-                                    <div class="bar"><span></span></div>
-                                </div>
+<div style="margin: 1rem 0;">
+  <div class="info">📱 Programming Languages</div>
+  <div class="muted" style="margin-left: 1rem;">
+    • Kotlin • Java • Dart • Python • JavaScript
+  </div>
+</div>
 
-                                <div class="progress">
-                                    <h3>Flutter <span>50%</span></h3>
-                                    <div class="bar"><span></span></div>
-                                </div>
+<div style="margin: 1rem 0;">
+  <div class="info">🏗️ Frameworks & Libraries</div>
+  <div class="muted" style="margin-left: 1rem;">
+    • Android SDK • Jetpack Compose • Flutter
+  </div>
+  <div class="muted" style="margin-left: 1rem;">
+    • RxKotlin • RxJava • Coroutines • Flow
+  </div>
+  <div class="muted" style="margin-left: 1rem;">
+    • Kotlin Multiplatform • Retrofit • Dagger • Hilt
+  </div>
+</div>
 
-                                <div class="progress">
-                                    <h3>Dart <span>50%</span></h3>
-                                    <div class="bar"><span></span></div>
-                                </div>
+<div style="margin: 1rem 0;">
+  <div class="info">🏛️ Architecture & Patterns</div>
+  <div class="muted" style="margin-left: 1rem;">
+    • MVVM • Clean Architecture
+  </div>
+  <div class="muted" style="margin-left: 1rem;">
+    • Dependency Injection (DI) • Repository Pattern
+  </div>
+</div>
 
-                                <div class="progress">
-                                    <h3>Ktor <span>50%</span></h3>
-                                    <div class="bar"><span></span></div>
-                                </div>
+<div style="margin: 1rem 0;">
+  <div class="info">🔧 Android Specific</div>
+  <div class="muted" style="margin-left: 1rem;">
+    • AIDL • Android Auto • AOSP
+  </div>
+  <div class="muted" style="margin-left: 1rem;">
+    • Android Automotive OS • Services • Broadcast Receivers
+  </div>
+  <div class="muted" style="margin-left: 1rem;">
+    • WorkManager • Room Database • DataStore
+  </div>
+</div>
 
-                                <div class="progress">
-                                    <h3>SQLite <span>80%</span></h3>
-                                    <div class="bar"><span></span></div>
-                                </div>
+<div style="margin: 1rem 0;">
+  <div class="info">🛠️ Development Tools</div>
+  <div class="muted" style="margin-left: 1rem;">
+    • Android Studio • IntelliJ IDEA
+  </div>
+  <div class="muted" style="margin-left: 1rem;">
+    • Gradle • Maven • Git • GitHub • GitLab
+  </div>
+  <div class="muted" style="margin-left: 1rem;">
+    • Firebase • Postman • Charles Proxy
+  </div>
+</div>
 
-                                <div class="progress">
-                                    <h3>MongoDB <span>70%</span></h3>
-                                    <div class="bar"><span></span></div>
-                                </div>
+<div style="margin: 1rem 0;">
+  <div class="info">🚀 CI/CD & DevOps</div>
+  <div class="muted" style="margin-left: 1rem;">
+    • GitHub Actions • Jenkins • Bitrise • App Distribution
+  </div>
+</div>
 
-				<div class="progress">
-                                    <h3>Android <span>80%</span></h3>
-                                    <div class="bar"><span></span></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+<div style="margin: 1rem 0;">
+  <div class="info">📊 Methodologies</div>
+  <div class="muted" style="margin-left: 1rem;">
+    • Agile • Scrum • Kanban
+  </div>
+</div>
 
--->
+<div style="margin: 1rem 0;">
+  <div class="info">🧪 Testing</div>
+  <div class="muted" style="margin-left: 1rem;">
+    • JUnit • Espresso • Mockito • MockK
+  </div>
+  <div class="muted" style="margin-left: 1rem;">
+    • UI Testing • Unit Testing • Integration Testing
+  </div>
+</div>`;
+                }
+            },
 
+            contact: {
+                description: 'Contact information',
+                execute: () => {
+                    return `
+<div class="success">Connect With Me</div>
+<div class="muted">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</div>
 
+<div style="margin: 1rem 0;">
+  <div><span class="info">GitHub:</span> <a href="https://github.com/mafujuls" target="_blank">github.com/mafujuls</a> <span class="muted">→ type 'github'</span></div>
+  <div><span class="info">LinkedIn:</span> <a href="https://linkedin.com/in/mafujuls" target="_blank">linkedin.com/in/mafujuls</a> <span class="muted">→ type 'linkedin'</span></div>
+  <div><span class="info">Twitter:</span> <a href="https://twitter.com/mafujuls" target="_blank">twitter.com/mafujuls</a> <span class="muted">→ type 'twitter'</span></div>
+  <div><span class="info">Stack Overflow:</span> <a href="https://stackoverflow.com/users/7624402/mafujul" target="_blank">stackoverflow.com/users/7624402/mafujul</a> <span class="muted">→ type 'stackoverflow'</span></div>
+  <div><span class="info">Instagram:</span> <a href="https://instagram.com/mafujuls" target="_blank">instagram.com/mafujuls</a> <span class="muted">→ type 'instagram'</span></div>
+</div>
 
+<div class="highlight">
+💡 Tip: Type the platform name to open it directly in a new tab!
+</div>
 
-<!--Portfolio section design
-            <section class="Portfolio" id="Portfolio">
-                <h2 class="heading"> Latest <span>Project</span></h2>
+<div style="margin-top: 1rem;" class="muted">
+Feel free to reach out for collaborations or just to chat about tech!
+</div>`;
+                }
+            },
 
-                <div class="Portfolio-container">
-                    <div class="Portfolio-box">
-                        <img src="images/SQL.png" alt="">
-                        <div class="Portfolio-layer">
-                            <h4>SQL Query</h4>
-                            <p>SQL Project on Gaming Data</p>
-                            <a href="https://github.com/MoamenaSamir/Gaming-Data/blob/main/SQLQuery1.sql"><i class='bx bx-link-external'></i></a>
-                        </div>
-                    </div>
+            projects: {
+                description: 'View projects',
+                execute: () => {
+                    return `
+<div class="success">Featured Projects</div>
+<div class="muted">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</div>
 
-                    <div class="Portfolio-box">
-                        <img src="images/Airplane Crashes.png" alt="">
-                        <div class="Portfolio-layer">
-                            <h4>Power BI Dashboard</h4>
-                            <p>Power BI Project on Airplane Crashes Around The World(1980-2023)</p>
-                            <a href="https://app.powerbi.com/groups/b8ea84ec-316a-4c94-a36a-9904f1daa432/reports/27ff20be-664e-4e20-a866-f523b3e67d09/ReportSectionb546e6ee980c40b5be1c?experience=power-bi"><i class='bx bx-link-external'></i></a>
-                        </div>
-                    </div>
+<div style="margin: 1rem 0;">
+  <div class="info">🔗 GitHub Profile</div>
+  <div class="muted">Visit <a href="https://github.com/mafujuls" target="_blank">github.com/mafujuls</a> for more projects</div>
+</div>
 
-                    <div class="Portfolio-box">
-                        <img src="images/Car Crash.png" alt="">
-                        <div class="Portfolio-layer">
-                            <h4>Power BI Dashboard</h4>
-                            <p>Power BI Project on Car Crashes in Chicago(2015-2023)</p>
-                            <a href="https://app.powerbi.com/groups/me/reports/aac5a972-5bf7-4962-9d0a-3812ebd9f219/ReportSectionda81ce80c0d133b09422?experience=power-bi"><i class='bx bx-link-external'></i></a>
-                        </div>
-                    </div>
+<div style="margin-top: 1rem;" class="muted">
+Check out my repositories for mobile development projects,
+experiments, and open-source contributions.
+</div>`;
+                }
+            },
 
-                    <div class="Portfolio-box">
-                        <img src="images/Sales.png" alt="">
-                        <div class="Portfolio-layer">
-                            <h4>Power BI Dashboard</h4>
-                            <p>Power BI Project on Electronics Shop(2021-2022)</p>
-                            <a href="https://app.powerbi.com/groups/b8ea84ec-316a-4c94-a36a-9904f1daa432/reports/cac3634a-7584-4855-9eca-a013e3efb55e/ReportSection?experience=power-bi"><i class='bx bx-link-external'></i></a>
-                        </div>
-                    </div>
+            clear: {
+                description: 'Clear terminal',
+                execute: () => {
+                    terminal.innerHTML = '';
+                    return null;
+                }
+            },
 
-                    <div class="Portfolio-box">
-                        <img src="images/HR.png" alt="">
-                        <div class="Portfolio-layer">
-                            <h4>Power BI Dashboard</h4>
-                            <p>Power BI Project on HR Data</p>
-                            <a href="https://app.powerbi.com/groups/b8ea84ec-316a-4c94-a36a-9904f1daa432/reports/a9eea1a8-934e-453d-8416-8a2db43dfea5/ReportSection?experience=power-bi"><i class='bx bx-link-external'></i></a>
-                        </div>
-                    </div>
+            history: {
+                description: 'Show command history',
+                execute: () => {
+                    if (commandHistory.length === 0) {
+                        return '<div class="muted">No commands in history</div>';
+                    }
+                    return commandHistory.map((cmd, i) =>
+                        `<div class="muted">${i + 1}  ${cmd}</div>`
+                    ).join('');
+                }
+            },
 
-                    <div class="Portfolio-box">
-                        <img src="images/Global product.png" alt="">
-                        <div class="Portfolio-layer">
-                            <h4>Tableau Dashboard</h4>
-                            <p>Tableau Project on Global Product Sales</p>
-                            <a href="https://public.tableau.com/app/profile/moamena.samir8558/viz/OrdersOfProducts/Dashboard1"><i class='bx bx-link-external'></i></a>
-                        </div>
-                    </div>
+            banner: {
+                description: 'Display banner',
+                execute: () => {
+                    return `
+<pre class="ascii-art">
+ ███╗   ███╗ █████╗ ███████╗██╗   ██╗     ██╗██╗   ██╗██╗
+ ████╗ ████║██╔══██╗██╔════╝██║   ██║     ██║██║   ██║██║
+ ██╔████╔██║███████║█████╗  ██║   ██║     ██║██║   ██║██║
+ ██║╚██╔╝██║██╔══██║██╔══╝  ██║   ██║██   ██║██║   ██║██║
+ ██║ ╚═╝ ██║██║  ██║██║     ╚██████╔╝╚█████╔╝╚██████╔╝███████╗
+ ╚═╝     ╚═╝╚═╝  ╚═╝╚═╝      ╚═════╝  ╚════╝  ╚═════╝ ╚══════╝
+</pre>
+<div class="muted" style="margin: 1rem 0;">
+  Mobile Application Developer | Software Engineer
+</div>
+<div class="info">
+  Type 'help' to see available commands
+</div>`;
+                }
+            },
 
-                    <div class="Portfolio-box">
-                        <img src="images/Population.png" alt="">
-                        <div class="Portfolio-layer">
-                            <h4>Tableau Dashboard</h4>
-                            <p>Tableau Project on World Population Census</p>
-                            <a href="https://public.tableau.com/app/profile/moamena.samir8558/viz/thecountryspopulation/Dashboard2"><i class='bx bx-link-external'></i></a>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            // Social Media Commands
+            github: {
+                description: 'Open GitHub profile',
+                execute: () => {
+                    window.open('https://github.com/mafujuls', '_blank');
+                    return `<div class="success">✓ Opening GitHub profile in new tab...</div>
+<div class="muted">→ <a href="https://github.com/mafujuls" target="_blank">github.com/mafujuls</a></div>`;
+                }
+            },
 
--->
+            linkedin: {
+                description: 'Open LinkedIn profile',
+                execute: () => {
+                    window.open('https://linkedin.com/in/mafujuls', '_blank');
+                    return `<div class="success">✓ Opening LinkedIn profile in new tab...</div>
+<div class="muted">→ <a href="https://linkedin.com/in/mafujuls" target="_blank">linkedin.com/in/mafujuls</a></div>`;
+                }
+            },
 
+            twitter: {
+                description: 'Open Twitter profile',
+                execute: () => {
+                    window.open('https://twitter.com/mafujuls', '_blank');
+                    return `<div class="success">✓ Opening Twitter profile in new tab...</div>
+<div class="muted">→ <a href="https://twitter.com/mafujuls" target="_blank">twitter.com/mafujuls</a></div>`;
+                }
+            },
 
+            instagram: {
+                description: 'Open Instagram profile',
+                execute: () => {
+                    window.open('https://instagram.com/mafujuls', '_blank');
+                    return `<div class="success">✓ Opening Instagram profile in new tab...</div>
+<div class="muted">→ <a href="https://instagram.com/mafujuls" target="_blank">instagram.com/mafujuls</a></div>`;
+                }
+            },
 
+            stackoverflow: {
+                description: 'Open Stack Overflow profile',
+                execute: () => {
+                    window.open('https://stackoverflow.com/users/7624402/mafujul', '_blank');
+                    return `<div class="success">✓ Opening Stack Overflow profile in new tab...</div>
+<div class="muted">→ <a href="https://stackoverflow.com/users/7624402/mafujul" target="_blank">stackoverflow.com/users/7624402/mafujul</a></div>`;
+                }
+            }
+        };
 
+        // Execute command
+        function executeCommand(input) {
+            const cmd = input.trim().toLowerCase();
 
+            if (cmd === '') return null;
 
+            // Add to history
+            commandHistory.push(input.trim());
+            historyIndex = commandHistory.length;
 
-            <!--footer design-->
-            <footer class="footer">
-                <div class="footer-text">
-                    <p>Mafu.</p>
-                </div>
+            // Special commands
+            if (cmd === 'clear' || cmd === 'cls') {
+                return commands.clear.execute();
+            }
 
-                <div class="footer-iconTop">
-                    <a href="#"><i class="bx bx-up-arrow-alt"></i></a>
-                </div>
-            </footer>
+            // Check if command exists
+            if (commands[cmd]) {
+                return commands[cmd].execute();
+            }
 
-    <script src="script.js"></script>
+            // Command not found
+            return `<div class="error">Command not found: ${input}</div>
+<div class="muted">Type 'help' to see available commands</div>`;
+        }
+
+        // Real-time command validation
+        commandInput.addEventListener('input', (e) => {
+            const input = e.target.value.trim().toLowerCase();
+
+            // Check if current input matches a command
+            if (input && commands[input]) {
+                // Valid command - make it green
+                commandInput.style.color = 'var(--green)';
+            } else if (input) {
+                // Invalid command - keep default color
+                commandInput.style.color = 'var(--text)';
+            } else {
+                // Empty - reset to default
+                commandInput.style.color = 'var(--text)';
+            }
+        });
+
+        // Handle input
+        commandInput.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') {
+                const input = commandInput.value;
+
+                // Display command
+                const commandLine = document.createElement('div');
+                commandLine.className = 'output-line';
+                commandLine.innerHTML = `<span class="prompt">visitor@mafujul:~$</span> <span class="command">${input}</span>`;
+                terminal.appendChild(commandLine);
+
+                // Execute and display output
+                const output = executeCommand(input);
+                if (output !== null) {
+                    const outputLine = document.createElement('div');
+                    outputLine.className = 'output-line';
+                    outputLine.innerHTML = output;
+                    terminal.appendChild(outputLine);
+                }
+
+                // Clear input and reset color
+                commandInput.value = '';
+                commandInput.style.color = 'var(--text)';
+
+                // Scroll to bottom
+                terminal.scrollTop = terminal.scrollHeight;
+            }
+
+            // Command history navigation
+            if (e.key === 'ArrowUp') {
+                e.preventDefault();
+                if (historyIndex > 0) {
+                    historyIndex--;
+                    commandInput.value = commandHistory[historyIndex];
+                }
+            }
+
+            if (e.key === 'ArrowDown') {
+                e.preventDefault();
+                if (historyIndex < commandHistory.length - 1) {
+                    historyIndex++;
+                    commandInput.value = commandHistory[historyIndex];
+                } else {
+                    historyIndex = commandHistory.length;
+                    commandInput.value = '';
+                }
+            }
+
+            // Tab completion
+            if (e.key === 'Tab') {
+                e.preventDefault();
+                const input = commandInput.value.toLowerCase();
+                const matches = Object.keys(commands).filter(cmd => cmd.startsWith(input));
+                if (matches.length === 1) {
+                    commandInput.value = matches[0];
+                }
+            }
+        });
+
+        // Show banner on load
+        window.addEventListener('load', () => {
+            const bannerOutput = commands.banner.execute();
+            const outputLine = document.createElement('div');
+            outputLine.className = 'output-line';
+            outputLine.innerHTML = bannerOutput;
+            terminal.appendChild(outputLine);
+        });
+    </script>
 </body>
-
 </html>
