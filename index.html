@@ -6,6 +6,13 @@
     <meta name="description" content="Mafujul Islam - Interactive Terminal Portfolio">
     <title>mafujul@terminal ~ $</title>
 
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon_io/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_io/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_io/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon_io/apple-touch-icon.png">
+    <link rel="manifest" href="assets/favicon_io/site.webmanifest">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -289,6 +296,23 @@
         // Focus input on page click
         document.addEventListener('click', () => commandInput.focus());
 
+        // Set cursor to beginning when input is empty
+        commandInput.addEventListener('focus', () => {
+            if (commandInput.value === '') {
+                // Set cursor position to the beginning (position 0)
+                commandInput.setSelectionRange(0, 0);
+            }
+        });
+
+        // Keep cursor at the beginning when input is empty
+        commandInput.addEventListener('click', (e) => {
+            if (commandInput.value === '') {
+                // Prevent default cursor positioning
+                e.preventDefault();
+                commandInput.setSelectionRange(0, 0);
+            }
+        });
+
         // Command data
         const commands = {
             help: {
@@ -313,6 +337,7 @@
   <div><span class="help-command">clear</span><span class="help-desc">Clear the terminal</span></div>
   <div><span class="help-command">history</span><span class="help-desc">Show command history</span></div>
   <div><span class="help-command">banner</span><span class="help-desc">Display ASCII banner</span></div>
+  <div><span class="help-command">exit</span><span class="help-desc">Exit and close the terminal</span></div>
 </div>`;
                 }
             },
@@ -351,7 +376,7 @@ applications at e.solutions GmbH.
                 description: 'Who am I?',
                 execute: () => {
                     return `<div class="success">Mafujul Islam</div>
-<div class="muted">Mobile Application Developer with 8+ years of experience</div>`;
+<div class="muted">Software Engineer with 8+ years of experience</div>`;
                 }
             },
 
@@ -631,6 +656,24 @@ Feel free to reach out for collaborations or just to chat about tech!
 <div class="muted">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</div>
 
 <div style="margin: 1rem 0;">
+  <div class="info">📱 Ayah Finder (Android)</div>
+  <div class="muted">Quranic verse search application for Android</div>
+  <div class="muted">→ <a href="https://play.google.com/store/apps/details?id=xyz.brainbo.quranicsolution" target="_blank">Download on Google Play Store</a></div>
+</div>
+
+<div style="margin: 1rem 0;">
+  <div class="info">📱 Ayah Finder (iOS)</div>
+  <div class="muted">Quranic verse search application for iOS</div>
+  <div class="muted">→ <a href="https://apps.apple.com/de/app/koran-verssuche/id6748535211" target="_blank">Download on App Store</a></div>
+</div>
+
+<div style="margin: 1rem 0;">
+  <div class="info">🔧 Indie Kanban Board</div>
+  <div class="muted">Kanban board plugin for JetBrains IDEs</div>
+  <div class="muted">→ <a href="https://plugins.jetbrains.com/plugin/28749-kanban-board" target="_blank">View on JetBrains Marketplace</a></div>
+</div>
+
+<div style="margin: 1rem 0;">
   <div class="info">🔗 GitHub Profile</div>
   <div class="muted">Visit <a href="https://github.com/mafujuls" target="_blank">github.com/mafujuls</a> for more projects</div>
 </div>
@@ -727,6 +770,36 @@ experiments, and open-source contributions.
                     return `<div class="success">✓ Opening Stack Overflow profile in new tab...</div>
 <div class="muted">→ <a href="https://stackoverflow.com/users/7624402/mafujul" target="_blank">stackoverflow.com/users/7624402/mafujul</a></div>`;
                 }
+            },
+
+            // Utility command
+            exit: {
+                description: 'Exit and close the terminal',
+                execute: () => {
+                    // Close the tab after 3000ms
+                    setTimeout(() => {
+                        window.close();
+                    }, 3000);
+
+                    // Always show the goodbye message in plain text
+                    return `<div class="success">✨ Thank you for visiting! ✨</div>
+<div class="muted">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</div>
+
+<div style="margin: 1rem 0;">
+  <div>I truly appreciate you taking the time to explore my portfolio.</div>
+  <div style="margin-top: 0.5rem;">It was great having you here! Your visit means a lot to me.</div>
+</div>
+
+<div style="margin: 1rem 0;">
+  <div class="info">💼 Open to opportunities and collaborations</div>
+  <div class="muted">📧 Feel free to reach out anytime!</div>
+</div>
+
+<div class="success" style="margin: 1rem 0;">🌟 Hope to see you again soon! 🌟</div>
+
+<div class="muted" style="margin-top: 1.5rem;">→ Session terminated gracefully</div>
+<div class="info">⏳ This tab will close automatically in 3 seconds...</div>`;
+                }
             }
         };
 
@@ -767,8 +840,12 @@ experiments, and open-source contributions.
                 // Invalid command - keep default color
                 commandInput.style.color = 'var(--text)';
             } else {
-                // Empty - reset to default
+                // Empty - reset to default and move cursor to beginning
                 commandInput.style.color = 'var(--text)';
+                // Move cursor to beginning when input becomes empty
+                if (e.target.value === '') {
+                    commandInput.setSelectionRange(0, 0);
+                }
             }
         });
 
