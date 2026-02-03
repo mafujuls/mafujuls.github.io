@@ -776,9 +776,16 @@ experiments, and open-source contributions.
             exit: {
                 description: 'Exit and close the terminal',
                 execute: () => {
-                    // Close the tab after 3000ms
+                    // Try to close the tab after showing the message
                     setTimeout(() => {
                         window.close();
+                        // If window.close() didn't work (browser security), show a message
+                        setTimeout(() => {
+                            const statusLine = document.querySelector('.close-status');
+                            if (statusLine) {
+                                statusLine.innerHTML = '<div class="warning">⚠️ Unable to close tab automatically (browser security). Please close manually with Ctrl+W / Cmd+W</div>';
+                            }
+                        }, 100);
                     }, 3000);
 
                     // Always show the goodbye message in plain text
@@ -798,7 +805,7 @@ experiments, and open-source contributions.
 <div class="success" style="margin: 1rem 0;">🌟 Hope to see you again soon! 🌟</div>
 
 <div class="muted" style="margin-top: 1.5rem;">→ Session terminated gracefully</div>
-<div class="info">⏳ This tab will close automatically in 3 seconds...</div>`;
+<div class="info close-status">⏳ Attempting to close tab in 3 seconds...</div>`;
                 }
             }
         };
